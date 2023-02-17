@@ -525,6 +525,7 @@ h1 {
 }
 .llistat .item > .img > a:hover > img {
     transform: scale(1.2);
+    transition: 2s
 }
 
 .truncate {
@@ -789,7 +790,24 @@ div.menu-header .cerca {
 .destacats img{
     width: 100%;
 }
-
+.autors .llistat.horitzontal .item .dades-generals{
+    flex-direction:column;
+}
+.autors .llistat.horitzontal .item .espai-central {
+    height: 50px;
+    flex-grow: unset;
+    align-items: flex-end;
+}
+.autors .llistat.horitzontal .item .espai-central .subtitol{
+    height: 50px;
+    -webkit-line-clamp: 2;
+}
+.autors .llistat.horitzontal .item .resum {
+    height: 60px;
+    align-items: flex-end;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+}
 
 @media only screen and (min-width: 601px) { /*Mida M */
     main.portada .caixa .titol {
@@ -891,6 +909,17 @@ div.menu-header .cerca {
     .subtitol {
         padding: 1rem;
         font-size: 2.45rem;
+    }
+    .autors .llistat.horitzontal .item .espai-central {
+        height: 100px;
+        flex-grow: unset;
+        align-items: flex-end;
+    }
+    .autors .llistat.horitzontal .item .resum {
+        height: 200px;
+
+        align-items: flex-end;
+        -webkit-line-clamp: 9;
     }
 }
 
@@ -1009,6 +1038,17 @@ div.menu-header .cerca {
         height: 40px;
         -webkit-line-clamp: 2;
     }
+    .autors .llistat.horitzontal .item .espai-central {
+        height: 70px;
+        flex-grow: unset;
+        align-items: flex-end;
+    }
+    .autors .llistat.horitzontal .item .resum {
+        height: 140px;
+
+        align-items: flex-end;
+        -webkit-line-clamp: 6;
+    }
 }
 
 @media only screen and (min-width: 1281px) /* Mida XL*/
@@ -1044,6 +1084,17 @@ div.menu-header .cerca {
         height: 105px;
         -webkit-line-clamp: 5;
     }
+    .autors .llistat.horitzontal .item .espai-central {
+        height: 100px;
+        flex-grow: unset;
+        align-items: flex-end;
+    }
+    .autors .llistat.horitzontal .item .resum {
+        height: 200px;
+
+        align-items: flex-end;
+        -webkit-line-clamp: 9;
+    }
 }
 @media only screen and (min-width: 1921px) /* Mida XXL*/
 {
@@ -1055,5 +1106,16 @@ div.menu-header .cerca {
     }
     .truncate {
         -webkit-line-clamp: 6;
+    }
+    .autors .llistat.horitzontal .item .espai-central {
+        height: 150px;
+        flex-grow: unset;
+        align-items: flex-end;
+    }
+    .autors .llistat.horitzontal .item .resum {
+        height: auto;
+        flex-grow: 1;
+        align-items: flex-end;
+        -webkit-line-clamp: unset;
     }
 }

@@ -20,31 +20,71 @@
 </section>
 <section class="autors">
     {if sizeof($autors) > 0}
-        <div class="llistat horitzontal">
-            {foreach name=autors item=item from=$autors}
-                {assign var="position" value=$smarty.foreach.autors.iteration%4}
-                <a class="item pos-{$position}" href="menu/{$pagina.idseo}/{$item.id}">
-                    <div class="img">
-                        <img src="{$web_urlMedia}{$item.imatge}" alt="{$item.nom}" title="{$item.nom}"/>
-                    </div>
-                    <div class="dades">
-                        <div class="linia1">
-                            <div class="subtitol">
-                                {$item.nom}
+        <div style="display: flex;">
+            <div class="llistat horitzontal">
+                {foreach name=autors item=item from=$autors}
+                    {assign var="position" value=$smarty.foreach.autors.iteration%4}
+                    <div class="item  pos-{$position}" >
+                        <div class="img">
+                            <a href="menu/{$pagina.idseo}/{$item.id}">
+                                <img src="{$web_urlMedia}{$item.imatge}" alt="{$item.nom}" title="{$item.nom}"/>
+                            </a>
+                        </div>
+                        <div class="dades">
+                            <div class="dades-generals">
+                                <div class="espai-central">
+                                    <div class="subtitol">
+                                        <a href="menu/{$pagina.idseo}/{$item.id}">
+                                            {$item.nom}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="resum">
+                                    <a href="menu/{$pagina.idseo}/{$item.id}">
+                                        {$item.text}
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <strong>{$item.resum}</strong>
-                            </div>
+                            <div class="dades-enllac">
+                                <div class="durada">
+                                </div>
+                                <div class="boto-entrar">
+                                    <a href="menu/{$pagina.idseo}/{$item.id}">
+                                            <span class="material-icons">
+                                                east
+                                            </span>
+                                    </a>
+                                </div>
 
-                        </div>
-                        <div class="linia2">
-                            <div class="text">
-                                {$item.text}
                             </div>
                         </div>
                     </div>
-                </a>
-            {/foreach}
+
+
+    {*                <a class="item pos-{$position}" href="menu/{$pagina.idseo}/{$item.id}">*}
+    {*                    <div class="img">*}
+    {*                        <img src="{$web_urlMedia}{$item.imatge}" alt="{$item.nom}" title="{$item.nom}"/>*}
+    {*                    </div>*}
+    {*                    <div class="dades">*}
+    {*                        <div class="linia1">*}
+    {*                            <div class="subtitol">*}
+    {*                                {$item.nom}*}
+    {*                            </div>*}
+    {*                            <div>*}
+    {*                                <strong>{$item.resum}</strong>*}
+    {*                            </div>*}
+
+    {*                        </div>*}
+    {*                        <div class="linia2">*}
+    {*                            <div class="text">*}
+    {*                                {$item.text}*}
+    {*                            </div>*}
+    {*                        </div>*}
+    {*                    </div>*}
+    {*                </a>*}
+                {/foreach}
+            </div>
+            <div class="barra_color verd"></div>
         </div>
         {if $totalPag > 1}
             <div class="paginacio">
