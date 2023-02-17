@@ -1,0 +1,8 @@
+RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^([^/]*)?/?([^/]*)?/?(.*)?$ index.php?CONTEXT=$1&VERSION=$2&PATH_INFO=$3 [L,QSA]
+
+# si es tracta des del php és més versàtil
+RewriteRule ^(.*)?$ index.php?PATH_INFO=$1 [L,QSA]

@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: manresa-cat-ingress-prod
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+    - hosts:
+        - web.manresa.cat
+      secretName: apache-php-tls-prod
+  rules:
+    - host: 'web.manresa.cat'
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: webs-manresa-cat
+                port:
+                  number: 80
+    - host: 'www.manresa2022.cat'
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: webs-manresa-cat
+                port:
+                  number: 80

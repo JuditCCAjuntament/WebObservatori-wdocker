@@ -1,0 +1,9 @@
+FROM eu.gcr.io/websmunicipals/base-web:devel-v1
+
+COPY apache2/default.conf /etc/apache2/sites-enabled/000-default.conf
+
+RUN ln -s /var/www/html/web/webs/default /var/www/html/web/assets-default
+
+RUN ln -s /var/www/html/web /var/www/html/ciutatagora
+RUN mkdir /var/www/html/web/webs/ciutatagora
+RUN ln -s /var/www/html/web/webs/ciutatagora /var/www/html/web/assets

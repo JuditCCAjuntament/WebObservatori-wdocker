@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webs-manresa-cat-stage
+  namespace: stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webs-manresa-cat-stage
+  template:
+    metadata:
+      name: webs-manresa-cat-stage
+      labels:
+        app: webs-manresa-cat-stage
+    spec:
+      volumes:
+      - name: site-cache
+        emptyDir:
+          medium: Memory
+      containers:
+        - image: eu.gcr.io/ajuntament-manresa/webs-manresa-cat-devel:latest
+          imagePullPolicy: Always
+          name: webs-manresa-cat-container-stage
+          securityContext:
+            runAsUser: 33
+          env:
+            - name: REDIS_HOST
+              value: 10.106.70.3
+          volumeMounts:
+          - name: site-cache
+            mountPath: /var/www/html/cache
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 10m
+            limits:
+              memory: 256Mi
+              cpu: 100m

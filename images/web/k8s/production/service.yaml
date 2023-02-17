@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: webs-manresa-cat
+  name: webs-manresa-cat
+  namespace: default
+spec:
+  type: ClusterIP
+  clusterIP: 10.31.241.207
+  sessionAffinity: ClientIP
+  selector:
+    app: webs-manresa-cat
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80

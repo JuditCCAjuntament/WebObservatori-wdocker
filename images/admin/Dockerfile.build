@@ -1,0 +1,22 @@
+# build environment
+FROM node:16.13.1 as build
+LABEL stage=builder
+LABEL temporary=true
+
+WORKDIR /app
+# ENV PATH /app/node_modules/.bin:$PATH
+
+COPY . .
+
+RUN apt update && apt install git
+RUN yarn install
+RUN yarn build
+
+# production environment
+FROM nginx:1.23-alpine
+
+COPY --from=build --chown=nginx:nginx /app/build /usr/share/nginx/html/admin/ciutat_agora/
+COPY /nginx/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

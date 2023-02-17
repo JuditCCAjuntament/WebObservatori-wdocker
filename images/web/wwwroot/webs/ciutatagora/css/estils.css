@@ -1,0 +1,1059 @@
+@font-face {
+    font-family: 'Atyp Display Bold';
+    src: url('/ciutatagora/assets/fonts/AtypDisplay-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Atyp Display Medium';
+    src: url('/ciutatagora/assets/fonts/AtypDisplay-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Adieu Regular';
+    src: url('/ciutatagora/assets/fonts/Adieu-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    margin:auto;
+    max-width: 2400px;
+    display: grid;
+    font-family: "Atyp Display Medium", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'header '
+    'main'
+    'footer';
+    height: 100vh;
+}
+html {
+    font-size: 14px;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    /*padding: 1rem 2rem;*/
+    /*padding-top: 3.5rem;*/
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    width: 100%;
+    background: white;
+    max-width: 2400px;
+    z-index: 100;
+}
+header .titol {
+    line-height: unset;
+    /*font-size: 1.5rem;*/
+    /*font-size: 1.538rem;*/
+    font-size: 1.3rem;
+    margin: 10px 0px;
+    font-family: 'Adieu Regular';
+}
+
+header .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header .logo .titol > a:hover {
+    text-decoration: none;
+}
+header .botoMenuMbl {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+header .botoMenuMbl .material-icons {
+    color: black;
+    font-size: 2.3rem;
+}
+
+#menuMobil .titolMenuMbl .material-icons, #menuMobil .titolMenuMbl a {
+    line-height: normal;
+    height: auto;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+#menuMobil .titolMenuMbl a:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+#menuMobil .titolMenuMbl {
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+header .menu a {
+    color: black;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: Atyp Display Bold;
+}
+header .menu a:hover,
+header .menu a.select
+{
+    text-decoration: underline;
+}
+header .barra-inferior {
+    height: 50px;
+    width: 100%;
+    /*border-top: 2px solid;*/
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+}
+main {
+    grid-area: main;
+    /*border-left: 1px solid;*/
+    /*border-right: 1px solid;*/
+
+}
+
+main.portada .caixa .titol{
+    font-family: "Atyp Display Bold";
+    line-height: 1.2em;
+    font-size: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+}
+
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*********************************************************************************************************
+    rectificacions  materialize
+**********************************************************************************************************/
+
+button, input, optgroup, select, textarea {
+    font-family: "Atyp Display Medium", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 1rem;
+}
+.select-wrapper input.select-dropdown {
+    font-size: 1rem;
+}
+/*********************************************************************************************************
+    estils generals
+ *********************************************************************************************************/
+
+b,strong {
+    font-family: "Atyp Display Bold";
+    font-weight: normal;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.text-negreta {
+    font-family: "Atyp Display Bold";
+    line-height: 1.2em;
+}
+.btn {
+    background: white;
+    border: 2px solid;
+    border-radius: 1.5em;
+    margin: 5px;
+    color: black;
+    box-shadow: none;
+    text-transform: none;
+    height: auto;
+    padding: 0.5em 1em;
+    line-height: 1em;
+    font-size: 1rem;
+}
+.btn.gran {
+    font-size: 1.423rem;
+    font-family: "Atyp Display Bold";
+}
+
+.btn:hover,
+.btn.gran:hover {
+    background-color: #fadc32;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.btn.altres:hover {
+    background-color: #bcbfa7;
+}
+.btn.cosmograf:hover {
+    background-color: #ff67cb;
+}
+.btn.tocats_de_lletra:hover {
+    background-color: #32c4fa;
+}
+.btn.pessics_de_vida:hover {
+    background-color: #fc5f20;
+}
+.btn.pessics_de_saviesa:hover {
+    color: white;
+    background-color: #9e32fa;
+}
+.btn.ignagora:hover {
+    color: white;
+    background-color: #866944;
+}
+.btn.el_bosc_pensa:hover {
+    background-color: #15a846;
+}
+.btn.art:hover {
+    background-color: #e94859;
+}
+.btn.ciencia:hover {
+    background-color: #1484c8;
+}
+.avis_cookie {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.5) !important;
+}
+
+.avis_cookie > .container {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border: 2px solid rgba(0,0,0,0.6);
+    border-radius: 10px;
+    margin: 10px 10%;
+}
+
+h1,
+.subtitol {
+    /*padding: 1rem 2rem;*/
+    /*font-size: 2.45rem;*/
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    margin-top: 6rem;
+    font-family: "Atyp Display Bold"
+}
+h1 {
+    margin-top: 10px;
+}
+.caixa {
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.caixa .item {
+    padding: 2rem;
+}
+.caixa .item.descripcio {
+    font-size: 1.423rem;
+}
+.caixa .item.segueixnos  {
+    width: 100%;
+}
+.caixa .item.contacte  {
+    width: 100%;
+}
+.caixa.temes {
+    padding: 2rem 0px;
+    justify-content: space-evenly;
+}
+.caixa.temes .item {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    width: 50%;
+}
+.caixa.temes a {
+    font-size: 1.538rem;
+    font-weight: normal;
+    font-family: 'Atyp Display Bold';
+}
+.caixa .projectes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.caixa.video .item.dades {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.caixa.video .item.img {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid;
+}
+.caixa.video .item.versions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px;
+    padding-top: 10px;
+}
+.caixa.video .video-youtube {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+}
+.caixa.video .caixa-youtube {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+.llistat {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid;
+    /*border: 1px solid black;*/
+}
+
+.llistat .item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.autors .llistat .item.pos-2,
+.autors .llistat .item.pos-0 {
+    flex-direction: row-reverse;
+}
+.autors .llistat .item.pos-1,
+.autors .llistat .item.pos-3 {
+    flex-direction: row;
+}
+.llistat.horitzontal .item.pos-2,
+.llistat.horitzontal .item.pos-0 {
+    flex-direction: row-reverse;
+}
+.llistat.horitzontal .item.pos-1,
+.llistat.horitzontal .item.pos-3 {
+    flex-direction: row;
+}
+
+.llistat .item .img img {
+    width: 100%;
+    display: block;
+}
+
+.llistat .item .linia1,
+.llistat .item .linia2 {
+    display:flex;
+    width: 100%;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 0px;
+}
+.projectes .llistat .item .linia1 {
+    align-items: flex-start;
+}
+
+.paginacio {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    text-align: right;
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.paginacio a.select,
+.paginacio a:hover {
+    background: black;
+    color: white;
+}
+
+.paginacio a {
+    background: lightgrey;
+    padding: 10px;
+    width: 40px;
+    text-align: center;
+}
+
+.llistat .item .durada {
+    width: 6em;
+}
+
+.llistat .item .dades {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.llistat .subtitol {
+    padding-left: 0px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.llistat.vertical .item .img {
+    width: 100%;
+}
+.llistat.vertical .item .dades {
+    width: 100%;
+}
+.llistat.vertical .item .durada {
+    margin-left: 10px;
+    text-align: right;
+}
+.llistat.vertical .item .linia1 .btn {
+    margin-right: 0px;
+}
+.llistat.horitzontal .item .img {
+    width: 150px;
+}
+.llistat.horitzontal .item .dades {
+    width: calc(100% - 150px);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.llistat.horitzontal .item .linia2 {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+.llistat.horitzontal .item .linia1 {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    min-height: 6em;
+}
+.llistat.horitzontal .item .linia1 > div {
+    width: 100%;
+}
+.llistat.horitzontal .item  .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: black;
+}
+.llistat.horitzontal .item .resum {
+    width: 100%;
+    overflow: hidden;
+    height: 85px;
+    /*display: -webkit-box;*/
+    display: none;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+.llistat.horitzontal .item .projecte {
+    height: 40px;
+    display: none;
+}
+.llistat.horitzontal .item .autor {
+    overflow: hidden;
+    height: 35px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+.llistat .dades-generals {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 10px;
+}
+.llistat .espai-central {
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+}
+
+.llistat .subtitol {
+    height: 75px;
+    -webkit-line-clamp: 3;
+
+    padding: 0px;
+    margin-top: 0px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.llistat .boto-entrar a, .boto-entrar span {
+    display: block;
+    background: none;
+    padding: 5px;
+    border-radius: 50%;
+}
+.llistat .boto-entrar a:hover {
+    background: lightgrey;
+    text-decoration: none;
+}
+.llistat .item > .img {
+    overflow: hidden;
+}
+.llistat .item > .img {
+    overflow: hidden;
+}
+.llistat .item > .img > a:hover > img {
+    transform: scale(1.2);
+}
+
+.truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+    color: black;
+}
+.llistat.horitzontal .item .linia1 .btn {
+    margin-left: 0px;
+}
+
+.llistat .dades-enllac {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.autors .llistat.horitzontal .item .linia1 {
+    flex-direction: column;
+    height: auto;
+}
+.autors .llistat.horitzontal .item .linia2 {
+    flex-grow: unset;
+}
+.detall-projecte,
+.detall-autor {
+    display: flex;
+    flex-wrap: wrap;
+}
+.detall-projecte > .dades,
+.detall-autor > .dades {
+    width: 100%;
+    padding: 20px;
+}
+.detall-projecte > .img,
+.detall-autor > .img {
+    width: 100%;
+}
+.destacats .llistat {
+    font-size: 1.423rem;
+}
+.destacats .llistat .btn {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+}
+.destacats .llistat .item {
+    margin-bottom: 20px;
+    border: 0px;
+}
+.destacats .llistat .item .video {
+    border: 2px solid;
+    width: calc(100% - 40px);
+    border-left: 0px;
+}
+
+.destacats .llistat .item .barra {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    background: #fc5f20;
+    width: 40px;
+}
+
+.destacats .llistat .linia2 > div {
+    width: 100%;
+    border-top: 2px solid;
+    padding: 1rem;
+}
+.destacats .llistat .linia1 > div {
+    width: 100%;
+    text-align: left;
+}
+.destacats .llistat .item .linia2 {
+    padding: 0px;
+}
+.destacats .llistat .projecte-durada {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.destacats .llistat .item .durada {
+    text-align: left;
+}
+.destacats .llistat.vertical .item .img {
+    height: auto;
+    overflow: auto;
+    /*min-height: 300px;*/
+    position: relative;
+}
+.destacats .boto-play {
+    position: absolute;
+    margin: auto;
+    left: calc(50% - 18px);
+    top: calc(50% - 20px);
+
+}
+.barra_color {
+    display: none;
+    width: 40px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.barra_color.verd {
+    background: #36b74d;
+}
+.ultimes_publicacions .llistat {
+    width: 100%;
+}
+.ultimes_publicacions .llistat .resum{
+    display: none;
+}
+.ultimes_publicacions .llistat .item .linia1 {
+    min-height: auto;
+    padding-top: 1rem;
+}
+
+
+.filAriadna {
+    padding: 10px;
+}
+.filAriadna .breadcrumb {
+    color: black;
+}
+.filAriadna .breadcrumb {
+    font-size: 0.923rem;
+    text-decoration: underline;
+    color: black !important;
+}
+.filAriadna .breadcrumb:hover {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.filAriadna .breadcrumb:before
+{
+    font-size: 0.923rem;
+    color: black;
+}
+
+ul.llistat_documents {
+    padding-left: 20px;
+}
+ul.llistat_documents > li {
+    list-style-type: square;
+}
+
+section div.boto {
+    text-align: center;
+    padding-top: 2rem;
+}
+.documents ul {
+    padding-left: 15px;
+}
+
+.documents ul > li {
+    list-style-type: square;
+}
+footer {
+    /*border-bottom: 2px solid;*/
+    /*border-left: 1px solid;*/
+    /*border-right: 1px solid;*/
+}
+footer .subtitol {
+    margin-top: 2rem;
+}
+footer .suport {
+    width: 100%;
+}
+footer .suport .caixa {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .suport img {
+    height: 45px;
+    display: block;
+}
+
+footer .segueixnos {
+    width: 100%;
+    border-bottom: 2px solid;
+}
+footer .contacte {
+    width: 100%;
+    border-bottom: 2px solid;
+}
+footer .caixa {
+    border: none;
+    border-top: 2px solid;
+    font-size: 1.423rem;
+}
+footer .segueixnos .caixa {
+    flex-direction: column;
+    justify-content: center;
+    height: 7em;
+    padding: 1rem;
+}
+footer .contacte .caixa {
+    align-items: center;
+    justify-content: space-between;
+    min-height: 7em;
+    padding: 1rem;
+}
+footer .contacte img.logo_ajmanresa {
+    height:45px;
+}
+footer .caixa .item {
+    padding: 2px 20px;
+}
+section.videos {
+    margin-top: 120px;
+}
+div.punxa {
+    display:none;
+}
+div.punxa > img {
+    height: 50px;
+}
+div.cerca .material-icons {
+    font-size:2.5rem
+}
+div.menu-header {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+div.menu-header .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: calc(100% - 50px);
+}
+div.menu-header .cerca {
+    width: 50px;
+    text-align: right;
+}
+.collapsible-secondary {
+    line-height: normal;
+    width: 48px;
+    text-align: center;
+}
+.collapsible-header {
+    justify-content: space-between;
+    align-items: center;
+}
+.collapsible-header > a {
+    width: 100%;
+}
+.destacats {
+    width: 100%;
+}
+
+.destacats img{
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 601px) { /*Mida M */
+    main.portada .caixa .titol {
+        font-size: 3.856rem;
+    }
+    .caixa.temes .item {
+        width: 25%;
+    }
+    .destacats .llistat .linia2 > div {
+        width: 33.33%;
+    }
+    .destacats .llistat .linia2 > div {
+        height: 100%;
+        border-right: 2px solid;
+    }
+    .destacats .llistat .linia2 > div:last-child {
+        border-right: 0px;
+    }
+    .destacats .llistat .linia1 > div {
+        width: 33.33%;
+        text-align: center;
+    }
+    .detall-projecte > .dades,
+    .detall-autor > .dades {
+        width: calc(100% - 300px);
+        padding-top: 0px;
+    }
+    .detall-projecte > .img,
+    .detall-autor > .img {
+        width: 300px;
+    }
+    .llistat .item {
+        border-right: 2px solid;
+    }
+    .llistat.horitzontal .item .img {
+        width: 300px;
+    }
+    .llistat.horitzontal .item .dades {
+        width: calc(100% - 300px);
+        flex-direction: column;
+    }
+    .llistat.horitzontal .item  .text {
+        -webkit-line-clamp: 8;
+    }
+    .llistat .dades-generals {
+        flex-direction: column;
+    }
+    .llistat .subtitol {
+        height: 50px;
+        -webkit-line-clamp: 2;
+    }
+    .llistat.horitzontal .item .resum {
+        display: -webkit-box;
+    }
+    .llistat.horitzontal .item .projecte {
+        display: block;
+    }
+    .caixa.video .video-youtube {
+        width: 560px;
+        height: 315px;
+        position: relative;
+    }
+    .caixa.video .caixa-youtube {
+        padding-bottom: 0px;
+    }
+    .truncate {
+        -webkit-line-clamp: 8;
+    }
+    .ultimes_publicacions .llistat {
+        width: calc(100% - 40px);
+    }
+    .ultimes_publicacions .llistat .resum{
+        display: block;
+    }
+    .ultimes_publicacions .llistat .item .linia1 {
+        min-height: 6em;
+    }
+    footer .suport .caixa {
+        flex-direction: row;
+    }
+    .barra_color {
+        display: block;
+    }
+    .barra_groga {
+        position: fixed;
+        background: #fadc32;
+        height: 200vh;
+        width: 40px;
+        left: 0;
+        border-right: 2px solid;
+    }
+    main,
+    footer,
+    header {
+        margin-left: 40px;
+        width: calc(100% - 40px);
+    }
+    h1,
+    .subtitol {
+        padding: 1rem;
+        font-size: 2.45rem;
+    }
+}
+
+@media only screen and (min-width: 993px) { /*Mida L */
+    header {
+        position: fixed;
+        justify-content: space-around;
+        padding: 1rem 2rem;
+    }
+    header .titol {
+        font-size: 1.5rem;
+    }
+    main {
+        margin-top: 125px;
+
+    }
+    .caixa.temes .item {
+        width: 20%;
+    }
+    .caixa .item.descripcio {
+        width: 50%;
+        border-right: 2px solid;
+    }
+    .caixa .item.projectes {
+        width: 50%;
+    }
+    .entrevistes .llistat .item {
+        width: 50%;
+    }
+    .temes .llistat .item {
+        width: 50%;
+    }
+    .projectes .llistat .item {
+        width: 50%;
+    }
+    .autors .llistat .item {
+        width: 50%;
+    }
+    .autors .llistat .item.pos-1,
+    .autors .llistat .item.pos-2 {
+        flex-direction: row;
+    }
+    .autors .llistat .item.pos-3,
+    .autors .llistat .item.pos-0 {
+        flex-direction: row-reverse;
+    }
+    .llistat.horitzontal .item.pos-1,
+    .llistat.horitzontal .item.pos-2 {
+        flex-direction: row;
+    }
+    .llistat.horitzontal .item.pos-3,
+    .llistat.horitzontal .item.pos-0 {
+        flex-direction: row-reverse;
+    }
+    .videos .llistat .item {
+        width: 50%;
+    }
+    .ultimes_publicacions .llistat .item {
+        width: 50%;
+    }
+    footer .segueixnos {
+        width: 40%;
+    }
+    footer .contacte {
+        width: 60%;
+    }
+    footer .contacte .caixa {
+        border-left: 2px solid;
+    }
+    footer .suport img {
+        height: 45px;
+    }
+    .llistat.horitzontal .item .img {
+        width: 50%;
+    }
+    .llistat.horitzontal .item .dades {
+        width: 50%;
+        flex-direction: column;
+    }
+    .llistat.horitzontal .item  .text {
+        -webkit-line-clamp: 4;
+    }
+    .llistat.vertical .item .img {
+        height: 300px;
+        overflow: hidden;
+    }
+    .llistat.vertical .item .dades {
+        height: calc(100% - 300px);
+    }
+    .caixa.video .item.img {
+        width: 600px;
+    }
+    .caixa.video .item.dades {
+        width: calc(100% - 600px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .caixa.video .item.dades > div {
+        margin-bottom: 20px;
+    }
+    .caixa.video .item.img {
+        border-bottom: 0px;
+    }
+    .truncate {
+        -webkit-line-clamp: 5;
+    }
+
+    div.punxa {
+        display: block;
+        position: absolute;
+        right: 150px;
+        top: -2px;
+    }
+    .llistat.horitzontal .item .resum {
+        height: 40px;
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media only screen and (min-width: 1281px) /* Mida XL*/
+{
+    header {
+        justify-content: space-between;
+    }
+    div.menu-header {
+        width: auto;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+    div.menu-header .menu{
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    footer .suport img {
+        height: 60px;
+    }
+    footer .contacte img.logo_ajmanresa {
+        height: 60px;
+    }
+    main {
+        margin-top: 80px;
+    }
+    html {
+        /*font-size: 20px;*/
+    }
+    .truncate {
+        -webkit-line-clamp: 4;
+    }
+    .llistat.horitzontal .item .resum {
+        height: 105px;
+        -webkit-line-clamp: 5;
+    }
+}
+@media only screen and (min-width: 1921px) /* Mida XXL*/
+{
+    main {
+        margin-top: 199px;
+    }
+    html {
+        /*font-size: 26px;*/
+    }
+    .truncate {
+        -webkit-line-clamp: 6;
+    }
+}

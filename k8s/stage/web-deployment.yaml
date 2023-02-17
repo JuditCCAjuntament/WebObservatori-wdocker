@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ciutat-agora-web-stage
+  labels:
+    app: ciutat-agora-web-stage
+  namespace: stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ciutat-agora-web-stage
+  template:
+    metadata:
+      name: ciutat-agora-web-stage
+      labels:
+        app: ciutat-agora-web-stage
+    spec:
+      containers:
+      - name: ciutat-agora-web-stage
+        image: eu.gcr.io/websmunicipals/ciutat-agora-web:devel-latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
+        envFrom:
+          - configMapRef:
+              name: redis-4-server-configmap
+          - configMapRef:
+              name: ciutat-agora-web-configmap
+          - configMapRef:
+              name: web-api-configmap
+          - configMapRef:
+              name: agenda-api-configmap
+          - configMapRef:
+              name: noticies-api-configmap
+          - configMapRef:
+              name: media-api-configmap
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 10m
+          limits:
+            memory: 256Mi
+            cpu: 100m

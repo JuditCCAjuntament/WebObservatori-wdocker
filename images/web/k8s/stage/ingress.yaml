@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webs-manresa-cat-ingress-stage
+  namespace: stage
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-stage"
+spec:
+  tls:
+    - hosts:
+        - devel.manresa.cat
+      secretName: apache-php-tls-stage
+    - hosts:
+        - devel.manresa2022.cat
+      secretName: manresa2022-tls-stage
+  rules:
+    - host: 'devel.manresa.cat'
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: webs-manresa-cat-stage
+                port:
+                  number: 80
+    - host: 'devel.manresa2022.cat'
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: webs-manresa-cat-stage
+                port:
+                  number: 80

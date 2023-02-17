@@ -1,0 +1,96 @@
+{
+  "name": "admin-ciutat_agora",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/admin/ciutatagora",
+  "dependencies": {
+    "@date-io/date-fns": "^2.11.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.5",
+    "@mui/lab": "^5.0.0-alpha.54",
+    "@mui/material": "^5.0.6",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/md5": "^2.3.1",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "date-fns": "^2.25.0",
+    "md5": "^2.3.0",
+    "mobx": "^6.3.3",
+    "mobx-react": "^7.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-api-v2": "git+https://e8a5ce007f5ea25137792bb563618650fb274de9:x-oauth-basic@github.com/AjManresa/web-api-v2.git",
+    "web-app-v2": "git+https://e8a5ce007f5ea25137792bb563618650fb274de9:x-oauth-basic@github.com/AjManresa/web-app-v2.git",
+    "web-fields-v2": "git+https://e8a5ce007f5ea25137792bb563618650fb274de9:x-oauth-basic@github.com/AjManresa/web-fields-v2.git",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "jsx-a11y/accessible-emoji": "off",
+      "jsx-a11y/alt-text": "off",
+      "jsx-a11y/anchor-has-content": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "jsx-a11y/aria-activedescendant-has-tabindex": "off",
+      "jsx-a11y/aria-props": "off",
+      "jsx-a11y/aria-proptypes": "off",
+      "jsx-a11y/aria-role": "off",
+      "jsx-a11y/aria-unsupported-elements": "off",
+      "jsx-a11y/autocomplete-valid": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/control-has-associated-label": "off",
+      "jsx-a11y/heading-has-content": "off",
+      "jsx-a11y/html-has-lang": "off",
+      "jsx-a11y/iframe-has-title": "off",
+      "jsx-a11y/img-redundant-alt": "off",
+      "jsx-a11y/interactive-supports-focus": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "jsx-a11y/label-has-for": "off",
+      "jsx-a11y/lang": "off",
+      "jsx-a11y/media-has-caption": "off",
+      "jsx-a11y/mouse-events-have-key-events": "off",
+      "jsx-a11y/no-access-key": "off",
+      "jsx-a11y/no-autofocus": "off",
+      "jsx-a11y/no-distracting-elements": "off",
+      "jsx-a11y/no-interactive-element-to-noninteractive-role": "off",
+      "jsx-a11y/no-noninteractive-element-interactions": "off",
+      "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+      "jsx-a11y/no-noninteractive-tabindex": "off",
+      "jsx-a11y/no-onchange": "off",
+      "jsx-a11y/no-redundant-roles": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "jsx-a11y/role-has-required-aria-props": "off",
+      "jsx-a11y/role-supports-aria-props": "off",
+      "jsx-a11y/scope": "off",
+      "jsx-a11y/tabindex-no-positive": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

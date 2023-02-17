@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-ciutat-agora-admin-stage
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/issuer: "letsencrypt-dev-manresa-cat"
+  namespace: stage
+spec:
+  tls:
+    - hosts:
+        - dev.manresa.cat
+      secretName: dev-manresa-cat-tls
+  rules:
+    - host: dev.manresa.cat
+      http:
+        paths:
+          - path: /admin/ciutatagora
+            pathType: Prefix
+            backend:
+              service:
+                name: ciutat-agora-admin-stage
+                port:
+                  number: 80

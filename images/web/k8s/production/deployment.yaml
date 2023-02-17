@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webs-manresa-cat
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webs-manresa-cat
+  template:
+    metadata:
+      name: webs-manresa-cat
+      labels:
+        app: webs-manresa-cat
+    spec:
+      containers:
+        - image: eu.gcr.io/ajuntament-manresa/webs-manresa-cat-master:latest
+          imagePullPolicy: Always
+          name: webs-manresa-cat-container
+          securityContext:
+            runAsUser: 33
+          env:
+            - name: REDIS_HOST
+              value: 10.106.70.3
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              memory: 1Gi
+              cpu: 100m
+            limits:
+              memory: 1Gi
+              cpu: 500m
