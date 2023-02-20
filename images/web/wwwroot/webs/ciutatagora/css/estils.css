@@ -724,10 +724,6 @@ section.videos {
 section.video-detall {
     display: flex;
 }
-.video-detall .subtitol {
-    height: auto;
-    margin-top: 20px;
-}
 .video-detall .llistat > .item .versions {
     display: flex;
     flex-wrap: wrap;
@@ -870,6 +866,9 @@ div.menu-header .cerca {
     .llistat .subtitol {
         height: 50px;
         -webkit-line-clamp: 2;
+    }
+    .video-detall .subtitol {
+        height: auto;
     }
     .llistat.horitzontal > .item .resum {
         display: -webkit-box;
