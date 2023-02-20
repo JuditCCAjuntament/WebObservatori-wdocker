@@ -12,6 +12,7 @@ class ciutatAgoraApi extends apiGlobal {
             $vAjtApi = "local";
         }
 
+        $vAjtApi = isset($_COOKIE["ajt_api"]) ? $_COOKIE["ajt_api"] : $vAjtApi;
         switch ($vAjtApi) {
             case "local":
                 $vUrl = getenv('URL_API_CIUTATAGORA_LOCAL') != '' ? getenv('URL_API_CIUTATAGORA_LOCAL') : getenv('URL_API_CIUTATAGORA_PROD');
