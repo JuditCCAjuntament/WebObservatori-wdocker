@@ -816,7 +816,14 @@ div.menu-header .cerca {
     -webkit-line-clamp: 2;
     display: -webkit-box;
 }
-
+.proposta-didactica div {
+    display: flex;
+    align-items: center;
+}
+.proposta-didactica img {
+    width: 32px;
+    margin-right: 10px;
+}
 @media only screen and (min-width: 601px) { /*Mida M */
     main.portada .caixa .titol {
         font-size: 3.856rem;

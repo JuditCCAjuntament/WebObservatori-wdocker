@@ -42,9 +42,9 @@
                         Proposta didàctica
                     </div>
                     <div class="item" style="padding-top: 0px;">
-                        <ul>
+                        <ul class="proposta-didactica">
                             {foreach name=documents item=item_document from=$documents}
-                                <li><a href="{$item_document.url_document}" target="_blank">{$item_document.nom_document}</a></li>
+                                <li><div><img src="{$web_urlImg}/doc.png"/><a href="{$item_document.url_document}" target="_blank">{$item_document.nom_document}</a></div></li>
                             {/foreach}
                         </ul>
                     </div>
