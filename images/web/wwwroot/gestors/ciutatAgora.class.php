@@ -22,6 +22,10 @@ class ciutatAgora {
                 $vIdVideo = $aParams[1] ?? "";
                 if ($vIdVideo != "") {
                     $oRetorn = $this->oApi->getVideo($vIdVideo);
+                    $oRetorn['cerca'] = [
+                        "projecte"  => $oRetorn['id_projecte'],
+                    ];
+                    $oRetorn['relacionats'] = $this->oApi->getVideos($oRetorn['cerca']);
                     $this->template = "video.tpl";
                 } else {
                     $vMax = 10;
