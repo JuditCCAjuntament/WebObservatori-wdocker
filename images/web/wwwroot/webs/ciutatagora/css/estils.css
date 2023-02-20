@@ -411,10 +411,12 @@ h1 {
     margin-right: 0px;
 }
 .llistat.horitzontal > .item .img {
-    width: 150px;
+    /*width: 150px;*/
+    width: 50%;
 }
 .llistat.horitzontal > .item .dades {
-    width: calc(100% - 150px);
+    /*width: calc(100% - 150px);*/
+    width: 50%;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
@@ -858,10 +860,10 @@ div.menu-header .cerca {
         border-right: 2px solid;
     }
     .llistat.horitzontal > .item .img {
-        width: 300px;
+        /*width: 300px;*/
     }
     .llistat.horitzontal > .item .dades {
-        width: calc(100% - 300px);
+        /*width: calc(100% - 300px);*/
         flex-direction: column;
     }
     .llistat.horitzontal > .item  .text {
