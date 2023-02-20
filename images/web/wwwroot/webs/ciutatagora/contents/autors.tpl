@@ -40,9 +40,11 @@
                                     </div>
                                 </div>
                                 <div class="resum">
-                                    <a href="menu/{$pagina.idseo}/{$item.id}">
-                                        {$item.text}
-                                    </a>
+                                    <div>
+                                        <a href="menu/{$pagina.idseo}/{$item.id}">
+                                            {$item.text}
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="dades-enllac">

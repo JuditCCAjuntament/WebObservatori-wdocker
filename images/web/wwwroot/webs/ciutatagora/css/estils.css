@@ -449,9 +449,14 @@ h1 {
     height: 85px;
     /*display: -webkit-box;*/
     display: none;
+
+    white-space: normal;
+}
+.llistat.horitzontal > .item .resum > div {
+    display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    white-space: normal;
+    overflow: hidden;
 }
 .llistat.horitzontal > .item .projecte {
     height: 40px;
@@ -815,8 +820,12 @@ div.menu-header .cerca {
 .autors .llistat.horitzontal > .item .resum {
     height: 60px;
     align-items: flex-end;
+
+}
+.autors .llistat.horitzontal > .item .resum > div {
     -webkit-line-clamp: 2;
     display: -webkit-box;
+    overflow: hidden;
 }
 .proposta-didactica div {
     display: flex;
@@ -880,8 +889,10 @@ div.menu-header .cerca {
         height: auto;
     }
     .llistat.horitzontal > .item .resum {
-        display: -webkit-box;
+        display: block;
     }
+
+
     .llistat.horitzontal > .item .projecte {
         display: block;
     }
@@ -932,10 +943,10 @@ div.menu-header .cerca {
         align-items: flex-end;
     }
     .autors .llistat.horitzontal > .item .resum {
-        height: 200px;
-
-        align-items: flex-end;
-        -webkit-line-clamp: 9;
+        height: 150px;
+    }
+    .autors .llistat.horitzontal > .item .resum > div{
+        -webkit-line-clamp: 6;
     }
     .video-detall .llistat > .item .projecte {
         width: 50%;
@@ -1046,6 +1057,8 @@ div.menu-header .cerca {
     }
     .llistat.horitzontal > .item .resum {
         height: 40px;
+    }
+    .llistat.horitzontal > .item .resum > div {
         -webkit-line-clamp: 2;
     }
     .autors .llistat.horitzontal > .item .espai-central {
@@ -1055,9 +1068,10 @@ div.menu-header .cerca {
     }
     .autors .llistat.horitzontal > .item .resum {
         height: 140px;
+    }
+    .autors .llistat.horitzontal > .item .resum > div {
 
-        align-items: flex-end;
-        -webkit-line-clamp: 6;
+        -webkit-line-clamp: 5;
     }
 }
 
@@ -1092,6 +1106,8 @@ div.menu-header .cerca {
     }
     .llistat.horitzontal > .item .resum {
         height: 105px;
+    }
+    .llistat.horitzontal > .item .resum > div{
         -webkit-line-clamp: 5;
     }
     .autors .llistat.horitzontal > .item .espai-central {
@@ -1101,9 +1117,9 @@ div.menu-header .cerca {
     }
     .autors .llistat.horitzontal > .item .resum {
         height: 200px;
-
-        align-items: flex-end;
-        -webkit-line-clamp: 9;
+    }
+    .autors .llistat.horitzontal > .item .resum > div{
+        -webkit-line-clamp: 8;
     }
 }
 @media only screen and (min-width: 1921px) /* Mida XXL*/
@@ -1125,7 +1141,9 @@ div.menu-header .cerca {
     .autors .llistat.horitzontal > .item .resum {
         height: auto;
         flex-grow: 1;
-        align-items: flex-end;
-        -webkit-line-clamp: unset;
+    }
+    .autors .llistat.horitzontal > .item .resum > div{
+
+        -webkit-line-clamp: 13;
     }
 }

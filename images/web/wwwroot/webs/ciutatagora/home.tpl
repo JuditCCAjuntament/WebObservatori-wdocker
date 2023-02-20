@@ -221,9 +221,11 @@
                                                 </div>
                                             </div>
                                             <div class="resum">
-                                                <a href="{$urlVideos}/{$item.id}">
-                                                    {$item.resum}
-                                                </a>
+                                                <div>
+                                                    <a href="{$urlVideos}/{$item.id}">
+                                                        {$item.resum}
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="dades-enllac">
