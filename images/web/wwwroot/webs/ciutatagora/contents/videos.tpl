@@ -115,46 +115,6 @@
         </div>
         <div class="barra_color verd"></div>
     </div>
-{*        {foreach name=entrevistes item=item from=$videos}*}
-{*            <div class="item" >*}
-{*                <div class="img">*}
-{*                    <a href="{$urlVideos}/{$item.id}">*}
-{*                        <img src="{$web_urlMedia}{$item.imatge_h}" alt="{$item.nom}" title="{$item.nom}"/>*}
-{*                    </a>*}
-{*                </div>*}
-{*                <div class="dades">*}
-{*                    <div class="linia1 subtitol">*}
-{*                        <a href="{$urlVideos}/{$item.id}">*}
-{*                            {$item.nom}*}
-{*                        </a>*}
-{*                    </div>*}
-{*                    <div class="linia1">*}
-{*                        <div class="autor">*}
-{*                            {if $item.autors !=''}*}
-{*                                {assign var="autors" value=explode("#",$item.autors)}*}
-{*                                {foreach name=autors item=item_autor from=$autors}*}
-{*                                    {assign var="autor" value=explode(":",$item_autor)}*}
-{*                                    <a href="{$urlAutors}/{$autor[1]}">{$autor[0]}</a><br/>*}
-{*                                {/foreach}*}
-{*                            {/if}*}
-{*                        </div>*}
-{*                        <div class="projecte">*}
-{*                            <a class="btn {$item.projecte|normaliza}" href="{$urlProjectes}/{$item.id_projecte}">{$item.projecte}</a>*}
-{*                        </div>*}
-{*                    </div>*}
-{*                    <div class="linia2">*}
-{*                        <div class="resum">*}
-{*                            <a href="{$urlVideos}/{$item.id}">*}
-{*                                {$item.resum}*}
-{*                            </a>*}
-{*                        </div>*}
-{*                        <div class="durada">*}
-{*                            {$item.durada}*}
-{*                        </div>*}
-{*                    </div>*}
-{*                </div>*}
-{*            </div>*}
-{*        {/foreach}*}
     {if $totalPag > 1}
         <div class="paginacio">
             {for $paginacio=1 to $totalPag}
