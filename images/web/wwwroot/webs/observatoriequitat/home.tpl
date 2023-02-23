@@ -3,11 +3,11 @@
 {assign var="web_urlImgDefault" value="assets-default/img/"}
 {assign var="web_urlMedia" value=$urlMedia}
 
-{assign var="web_urlCss" value="css/"}
-{assign var="web_urlJs" value="js/"}
-{assign var="web_urlImg" value="res/img/"}
+{assign var="web_urlCss" value="assets/css/"}
+{assign var="web_urlJs" value="assets/js/"}
+{assign var="web_urlImg" value="assets/img/"}
 {assign var="web_urlHelper" value="`$portal.dir_template`/helpers/"}
-{assign vas="google_Icons" value="https://fonts.googleapis.com/icon?family=Material+Icons"}
+{assign var="google_Icons" value="https://fonts.googleapis.com/icon?family=Material+Icons"}
 {assign var="open_sans" value="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900"}
 {assign var="materialize_framework_css" value="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"}
 {assign var="jquery_cdn" value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"}
@@ -113,6 +113,11 @@
         <div class="mainTitle">
             <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
         </div>
+    {if $dump_string}
+        {foreach name=dumps item=item from=$dump_string}
+            <div>{$item}</div>
+        {/foreach}
+    {/if}
         <div class="aboutDiv">
             <div class="sobreLobservatoriDiv aboutSuvDiv">
                 <h2>Sobre l’Observatori</h2>
@@ -231,7 +236,7 @@
             Observatori per l'equitat i la igualtat d'oportunitats educatives - Tots els drets reservats
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <!-- Materialize Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
