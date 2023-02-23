@@ -26,4 +26,4 @@ services:
       - 80:80
     volumes:
       #allow *.sql, *.sql.gz, or *.sh and is execute only if data directory is empty
-      - ./images/web/wwwroot/webs/observatori-educatiu:/var/www/html/web/webs/observatori-educatiu
+      - ./images/web/wwwroot/webs/observatori-educatiu:/var/www/html/web/webs/observatoriequitat

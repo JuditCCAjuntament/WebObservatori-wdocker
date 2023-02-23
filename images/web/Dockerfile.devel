@@ -4,6 +4,6 @@ COPY apache2/default.conf /etc/apache2/sites-enabled/000-default.conf
 
 RUN ln -s /var/www/html/web/webs/default /var/www/html/web/assets-default
 
-RUN ln -s /var/www/html/web /var/www/html/observatori-educatiu
-RUN mkdir /var/www/html/web/webs/observatori-educatiu
-RUN ln -s /var/www/html/web/webs/observatori-educatiu /var/www/html/web/assets
+RUN ln -s /var/www/html/web /var/www/html/observatoriequitat
+RUN mkdir /var/www/html/web/webs/observatoriequitat
+RUN ln -s /var/www/html/web/webs/observatoriequitat /var/www/html/web/assets
