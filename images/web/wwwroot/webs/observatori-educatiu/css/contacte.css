@@ -1,0 +1,172 @@
+.contacteDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #68afa1 !important;
+}
+
+.mailName{
+    display: flex;
+    width: 100%;
+    
+}
+.inputs input {
+    margin-left: 15px !important;
+    box-sizing : border-box;
+    border-style: solid !important;
+    padding: 16px !important;
+    font-size: 20px !important;
+    border-width: 1px !important;
+    background-color: #eeeeee !important;
+    border-color: #bbbbbb !important;
+    color: #999;
+    width: 100%;
+}
+.inputs textarea {
+    margin-left: 15px !important;
+    box-sizing : border-box;
+    border-style: solid !important;
+    padding: 16px !important;
+    font-size: 20px !important;
+    border-width: 1px !important;
+    background-color: #eeeeee !important;
+    border-color: #bbbbbb !important;
+    color: #999;
+    width: 100%;
+    height: 200px;
+}
+.inputs input::placeholder{
+    color: #999 !important;
+    font-size: 20px !important;
+}
+.inputs textarea::placeholder{
+    color: #999 !important;
+    font-size: 20px !important;
+}
+.contacteDiv h1 {
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF !important;
+}
+
+.contacteFlex {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.dades {
+    height: 100%;
+    width: 50%;
+    margin-right: 10%;
+    
+}
+
+.inputs {
+    height: 100%;
+    padding-top: 15px;
+    padding-right: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+
+.messageDiv{
+    min-height: 150px;
+    margin-top: 10px;
+    
+}
+
+.contacteDiv h3 {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+.contacteDiv p {
+    font-size: 26px;
+    color: white;
+}
+
+.sendDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse !important;
+    align-items: center;
+    
+}
+.sendDiv a{
+    color: #FFFFFF!important;
+    align-self: center;
+    transition: all 300ms ease 0ms;
+    display: inline-block;
+    position: relative;
+    font-size: 23px;
+    font-weight: 500;
+    padding: 0.3em 1em;
+    padding-right: 0px;
+    padding-left: 0px;
+    line-height: 1.7em!important;
+    background-color: transparent;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 2px solid;
+    border-radius: 3px;
+    text-align: center;
+    width: 20%;
+}
+.sendDiv i.material-icons{
+    font-size: 30px;
+    vertical-align: middle;
+}
+.sendDiv p{
+    display: inline-block;
+}
+.sendDiv input{
+    display: inline-block; 
+    margin: 10px !important; 
+    height: 20% !important;
+    width: 2% !important;
+    size: 2 !important;
+}
+
+@media only screen and (max-width: 720px) { 
+    .contacteFlex{
+        flex-direction: column;
+        height: 100%;
+    }
+    .dades{
+        width: 100%;
+        word-wrap: break-word;
+    }
+    .inputs{
+        padding: 0px;
+        width: 95vw;
+    }
+    .inputs input{
+        margin-left: 0px !important;
+    }
+    .inputs textarea{
+        margin-left: 0px !important;
+    }
+    #name{
+        margin-right: 15px;
+    }
+    .sendDiv{
+        align-items: center;
+        justify-content: center;
+    }
+    .sendDiv a{
+        width: 30%;
+    }
+}

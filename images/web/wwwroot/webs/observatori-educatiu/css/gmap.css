@@ -1,0 +1,40 @@
+.interaccioDiv{
+    margin-top: 10vh;
+    width: 100%;
+    background-color: #ebc9bf!important;
+    display: flex;
+
+}
+.interaccioTitleDiv{
+    width: 40%;
+    padding: 5%;
+}
+.interaccioTitleDiv h2{
+    font-weight: 750;
+    font-size: 45px;
+    color: #d8685d!important;
+}
+.interaccioTitleDiv p{
+    color: #666;
+    font-size: 26px;
+    line-height: 1.7em;
+    font-weight: 400;
+}
+
+.interaccioMapDiv{
+    width: 100%;
+}
+@media only screen and (max-width: 720px) { 
+    .interaccioDiv{
+        flex-direction: column;
+
+    }
+    .interaccioTitleDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 5%;
+    }
+}

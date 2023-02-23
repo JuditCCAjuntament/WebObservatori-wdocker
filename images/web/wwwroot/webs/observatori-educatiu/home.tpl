@@ -1,395 +1,239 @@
 
-{assign var="web_title" value="Manresa Ciutat Àgora"}
-
-{assign var="web_description" value=$portal.meta_description}
-{assign var="web_canonical" value=$portal.canonical}
-
-{assign var="dades_ciutatagora" value=$portal.dades_gestor}
-
-{assign var="urlVideos" value="menu/15049-videos"}
-{assign var="urlAutors" value="menu/15051-autors"}
-{assign var="urlProjectes" value="menu/15050-projectes"}
+{assign var="web_title" value="Observatori per l'equitat i la igualtat d'oportunitats educacives | Manresa"}
 
 {assign var="web_urlImgDefault" value="assets-default/img/"}
 {assign var="web_urlMedia" value=$urlMedia}
 
-{assign var="web_urlCss" value="assets/css/"}
-{assign var="web_urlJs" value="assets/js/"}
-{assign var="web_urlImg" value="assets/img/"}
+{assign var="web_urlCss" value="css/"}
+{assign var="web_urlJs" value="js/"}
+{assign var="web_urlImg" value="res/img/"}
 {assign var="web_urlHelper" value="`$portal.dir_template`/helpers/"}
-
-
-
+{assign vas="google_Icons" value="https://fonts.googleapis.com/icon?family=Material+Icons"}
+{assign var="open_sans" value="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900"}
+{assign var="materialize_framework_css" value="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"}
+{assign var="jquery_cdn" value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"}
+{assign var="nuclia_search" value="https://cdn.nuclia.cloud/nuclia-widget.umd.js"}
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="ca">
+<html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="pragma" content="no-cache"/>
-    <meta http-equiv="expires" content="-1"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{$web_description}"/>
-
-    <base href="{$portal.urlBase}/" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{$web_title}</title>
+    <link rel="icon" type="image/x-icon" href="{$web_urlImg}observatori.png">
+    <!-- Google icons -->
+    <link href={$google_Icons} rel="stylesheet">
+    <!-- materialize -->
+    <link rel="stylesheet" href={$materialize_framework_css}>
+    <!-- JQuery -->
+    <script src={$jquery_cdn}
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="icon" type="image/png" href="{$web_urlImg}favicon.png" />
-    <link rel="shortcut icon" href="{$web_urlImg}favicon.ico" />
+    <link href={$open_sans} rel="stylesheet">
+    <!-- Nuclia search cdn -->
+    <script src={$nuclia_search}></script>
 
-    <link rel="canonical" href="{$web_canonical}" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="all">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="{$web_urlCss}estils.css" media="all"/>
-
-    <!--[if lt IE 9]>
-    <link href="/css/bootstrap/ie_patch.css" rel="stylesheet">
-
-    <script src="/js/html5shiv.min.js" type="text/javascript" async="async"></script>
-    <script type="text/javascript" src="/js/respond/respond.min.js"  async="async"></script>
-    <![endif]-->
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{$web_urlCss}menu.css">
+    <link rel="stylesheet" href="{$web_urlCss}title.css">
+    <link rel="stylesheet" href="{$web_urlCss}about.css">
+    <link rel="stylesheet" href="{$web_urlCss}map.css">
+    <link rel="stylesheet" href="{$web_urlCss}indicadors.css">
+    <link rel="stylesheet" href="{$web_urlCss}gmap.css">
+    <link rel="stylesheet" href="{$web_urlCss}contacte.css">
 
 </head>
+
 <body>
-
-<header>
-    <div class="logo">
-        <div class="botoMenuMbl hide-on-large-only">
-            <a href="#" id="menuMbl" data-target="menuMobil" class="sidenav-trigger"><span class="material-icons">menu</span></a>
-        </div>
-        <div class="titol">
-            <a href="#">{$web_title}</a>
-        </div>
-    </div>
-    <div class="menu-header">
-        <div class="hide-on-med-and-down menu">
-            <a href="#" class="select">
-                Inici
-            </a>
-            {foreach name=llistatmenu item=item from=$portal.menu}
-                {assign var="extern" value=""}
-                {assign var="desti" value="menu/`$item.idseo`"}
-                {assign var="menuTopSel" value=""}
-
-                {if $item.url != "" }
-                    {assign var="desti" value=$item.url}
-                    {if $item.enllac_extern == 1}
-                        {assign var="extern" value="target=\"_blank\" "}
-                    {/if}
-
-                {/if}
-
-                {if $item.publicat == 1}
-                    <a href="{$desti}" {$extern} class="{$menuTopSel}">
-                        {$item.titol}
-                    </a>
-                {/if}
-            {/foreach}
-        </div>
-        <div class="hide-on-med-and-down cerca">
-            <a href="{$urlVideos}">
-                <span class="material-icons">search</span>
-            </a>
-
-        </div>
-
-    </div>
-    <div class="barra-inferior">
-        <div class="punxa">
-            <img src="{$web_urlImg}punxa2.png" alt="">
-        </div>
-    </div>
-    <div class="barra_groga"></div>
-    {if $mostrar_avis_cookies}
-        <div id="barracookies" class="avis_cookie white">
-            <div class="container">
-                <p>
-                    Aquest web utilitza galetes (cookies) per a oferir una millor experiència de navegació. Si continua navegant pel web, considerem que accepta la seva utilització.
-                </p>
-                <a href="javascript:acceptarCookies();void(0);" class="waves-effect waves-light btn">Acceptar</a>
-            </div>
-        </div>
-    {/if}
-
-</header>
-<ul id="menuMobil" class="sidenav leftside-navigation ps-container ps-active-y">
-    <li class="titolMenuMbl">
-        <a href="{$urlVideos}">
-            <span class="material-icons">search</span>
-        </a>
-        <a class="sidenav-close" href="#!">
-            <span class="material-icons">close</span>
-        </a>
-    </li>
-    <li class="menu-lateral">
-        {include file="`$web_urlHelper`template-menus_materialize.tpl" depth=0 urlHelper=$web_urlHelper menu=$portal.menu home=1}
-    </li>
-</ul>
-<main class="portada">
-    {if $dump_string}
-        {foreach name=dumps item=item from=$dump_string}
-            <div>{$item}</div>
-        {/foreach}
-    {/if}
-    <section class="caixa">
-        {if $portal.destacats}
-            <div class="destacats">
-                {if sizeof($portal.destacats) > 1}
-                    <div class="carousel carousel-slider autoplay" data-indicators="true">
-                        {foreach name=destacats item=item from=$portal.destacats}
-                            <div class="carousel-item" >
-                                <a href="{$item.url}" target="_blank">
-                                    <img src="{$web_urlMedia}docs/destacats/{$item.imatge}" class="responsive-img" style="min-width: 100%;" alt="{$item.descripcio}"/>
-                                </a>
-
-                            </div>
-                        {/foreach}
-                    </div>
-                {else}
-                    <a href="{$portal.destacats.0.url}" target="_blank">
-                        <img src="{$web_urlMedia}docs/destacats/{$portal.destacats.0.imatge}" class="responsive-img" alt="{$portal.destacats.0.descripcio}"/>
-                    </a>
-                {/if}
-            </div>
-        {/if}
-    </section>
-    <section class="caixa temes">
-            {if isset($dades_ciutatagora.temes) && sizeof($dades_ciutatagora.temes) > 0}
-                {foreach name=temes item=item from=$dades_ciutatagora.temes}
-                    <div class="item"><a href="{$urlVideos}?tema={$item.id}" >{$item.tema}</a></div>
-                {/foreach}
-            {/if}
-    </section>
-{*    <section class="caixa">*}
-{*        <div class="item descripcio">*}
-{*            Manresa Ciutat Àgora és un projecte transversal i vertebrador on podeu trobar continguts digitals de caire cultural, humanístic i científic generats a la ciutat.*}
-{*        </div>*}
-{*        <div class="item projectes">*}
-{*            {if isset($dades_ciutatagora.projectes) && sizeof($dades_ciutatagora.projectes) > 0}*}
-{*                {foreach name=projectes item=item from=$dades_ciutatagora.projectes}*}
-{*                    <div><a class="btn {$item.nom|normaliza}" href="{$urlProjectes}/{$item.id}">{$item.nom}</a></div>*}
-{*                {/foreach}*}
-{*            {/if}*}
-{*        </div>*}
-{*    </section>*}
-    {if sizeof($dades_ciutatagora.ultimes_act) > 0}
-        <section class="ultimes_publicacions">
-            <div class="subtitol">
-                Últimes publicacions
-            </div>
-            <div style="display: flex;">
-                <div class="llistat horitzontal">
-                    {foreach name=ultimes_act item=item from=$dades_ciutatagora.ultimes_act}
-                        {assign var="position" value=$smarty.foreach.ultimes_act.iteration%4}
-                        {if $smarty.foreach.ultimes_act.iteration < 5 }
-                                <div class="item  pos-{$position}" >
-                                    <div class="img">
-                                        <a href="{$urlVideos}/{$item.id}">
-                                            <img src="{$web_urlMedia}{$item.imatge_v}" alt="{$item.nom}" title="{$item.nom}"/>
-                                        </a>
-                                    </div>
-                                    <div class="dades">
-                                        <div class="dades-generals">
-                                            <div class="projecte">
-                                                <a class="btn {$item.projecte|normaliza}" href="{$urlProjectes}/{$item.id_projecte}">{$item.projecte}</a>
-                                            </div>
-                                            <div class="autor">
-                                                {if $item.autors !=''}
-                                                    {assign var="autors" value=explode("#",$item.autors)}
-                                                    {foreach name=autors item=item_autor from=$autors}
-                                                        {assign var="autor" value=explode(":",$item_autor)}
-                                                        <a href="{$urlAutors}/{$autor[1]}">{$autor[0]}</a>
-                                                        {if !$smarty.foreach.autors.last}
-                                                            <span>, </span>
-                                                        {/if}
-                                                    {/foreach}
-                                                {/if}
-                                            </div>
-                                            <div class="espai-central">
-                                                <div class="subtitol">
-                                                    <a href="{$urlVideos}/{$item.id}">
-                                                        {$item.nom}
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="resum">
-                                                <div>
-                                                    <a href="{$urlVideos}/{$item.id}">
-                                                        {$item.resum}
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dades-enllac">
-                                            <div class="durada">
-                                                {$item.durada} h
-                                            </div>
-                                            <div class="boto-entrar">
-                                                <a href="{$urlVideos}/{$item.id}">
-                                                    <span class="material-icons">
-                                                        east
-                                                    </span>
-                                                    </a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            {/if}
-                    {/foreach}
+    <!-- Nav -->
+    <nav class="white">
+        <div class="nav-wrapper">
+            <div class="mobileHolder">
+                <div class="imgContainer">
+                    <img class=" brand-logobrowser-default logo-img" src="res/img/logo-observatori-educacio.jpg"
+                        alt="Img not Found">
                 </div>
-                <div class="barra_color verd"></div>
+                <div class="linksContainer">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="hide-on-med-and-down">
+                        <li><a class="menu-text" href="index.html#sobreLobservatoriID">Sobre l’observatori</a></li>
+                        <li><a class="menu-text" href="index.html#conceptualMapID">Mapa conceptual</a></li>
+                        <li><a class="menu-text collapsibleIndicadors" href="index.html#indicadors">Indicadors<i
+                                    class="material-icons">expand_more</i></a></li>
+                        <li><a class="menu-text" href="index.html#mapa">Divulgació</a></li>
+                        <li><a class="menu-text" href="index.html#contacte">Contacte</a></li>
+                        <li><a class="searchTrigger"><i class="material-icons">search</i></li>
+    
+                    </ul>
+                </div>
+                <div class="searchContainer">
+                    <nuclia-search class="notMobile" knowledgebox="efe163df-f88a-4c28-8602-89d555213cd5" zone="europe-1"
+                        type="popup" features="navigateToLink"></nuclia-search>
+                    <a class="goBack"><i class="material-icons">arrow_back_ios_new</i>
+                </div>
+            </div>
+            <div class="moibleSearch">
+            
+            </div>
+        </div>
+        
+    </nav>
+
+    <ul class="sidenav mobileNavContainer" id="mobile-demo">
+        <li><a class="menu-text" href="index.html#sobreLobservatoriID">Sobre l’observatori</a></li>
+        <hr>
+        <li><a class="menu-text" href="index.html#conceptualMapID">Mapa conceptual</a></li>
+        <hr>
+        <li>
+            <a class="menu-text" href="index.html#indicadors">Indicadors</a>
+            <ul class="submenu">
+                <li><a href="indicadorsSocio.html">Indicadors Socioeconòmics</a></li>
+                <li><a href="indicadorsDemo.html">Indicadors Demogràfics</a></li>
+                <li><a href="indicadorsEscolars.html">Indicadors Escolars</a></li>
+
+            </ul>
+        </li>
+        <hr>
+        <li><a class="menu-text" href="index.html#mapa">Divulgació</a></li>
+        <hr>
+        <li><a class="menu-text" href="index.html#contacte">Contacte</a></li>
+        <hr>
+    </ul>
+
+    <div class="mainBody">
+        <div class="collapsibleItems">
+            <a class="menu-text" href="indicadorsSocio.html">Indicadors Socioeconòmics</a>
+            <a class="menu-text" href="indicadorsDemo.html">Idicadors Demogràfics</a>
+            <a class="menu-text" href="indicadorsEscolars.html">Indicadors Escolars</a>
+        </div>
+
+        <div class="mainTitle">
+            <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
+        </div>
+        <div class="aboutDiv">
+            <div class="sobreLobservatoriDiv aboutSuvDiv">
+                <h2>Sobre l’Observatori</h2>
+                <p>L’Observatori pretén ser una eina per a millorar el nivell de coneixement sobre l’equitat i la
+                    igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
+                    agents d’interès les dades recollides.
+                </p>
+                <img src="res/img/observatori.png" alt="Image not found" id="sobreLobservatoriID">
+            </div>
+            <div class="perqueImportantDiv aboutSuvDiv">
+                <h2>Per què és important l’Observatori?</h2>
+                <ul>
+                    <li>Tenir informació constant i actualitzada del fenomen d’interès.</li>
+                    <li>Diagnosticar i prioritzar les necessitats del col·lectiu d’interès.</li>
+                    <li>Permet detectar canvis i monitoritzar tendències.</li>
+                    <li>Posa en contacte diferents agents que interaccionen/intervenen en un fenomen i permet coordinar
+                        la seva actuació.</li>
+                    <li>Formular possibles escenaris futurs/anticipar situacions.</li>
+                    <li>Donar a conèixer problemàtiques/situacions a la resta de la població.</li>
+                </ul>
+            </div>
+            <div class="poblacioInteressadaDiv aboutSuvDiv">
+                <h2>Població interessada</h2>
+                <ul>
+                    <li>Professorat</li>
+                    <li>Centres educatius </li>
+                    <li>Consells escolars</li>
+                    <li>AFA</li>
+                    <li>Ajuntaments</li>
+                    <li>Famílies</li>
+                </ul>
             </div>
 
-            <div class="boto">
-                <a class="btn gran" href="{$urlVideos}">Descobreix-los tots</a>
+        </div>
+        <div class="conceptualMapDiv">
+            <img src="res/img/mapa.jpg" alt="" id="conceptualMapID">
+        </div>
+        <div class="indicadorsDiv " id="indocadors">
+            <div class="socioeDiv indicsDiv">
+                <h3>Indicadors socioeconòmics</h3>
+                <ul>
+                    <li>Taxa d’atur</li>
+                    <li>Renta familiar disponible bruta</li>
+                    <li>Índex socioeconòmic del territori</li>
+                </ul>
+                <a class="socioeAnchor" href="#">Indicadors socioeconòmics</a>
             </div>
-        </section>
-    {/if}
-    {if sizeof($dades_ciutatagora.destacats) > 0}
-        <section class="destacats">
-            <div class="subtitol">
-                Vídeo destacat
+            <div class="demograDiv indicsDiv">
+                <h3>Indicadors demogràfics</h3>
+                <ul>
+                    <li>Nacionalitat</li>
+                    <li>Nivell d’estudis assolit</li>
+                    <li>Nivell instrucció famílies</li>
+                </ul>
+                <a class="socioeAnchor" href="#">Indicadors demogràfics</a>
             </div>
-            <div class="llistat vertical">
-                {foreach name=destacats item=item from=$dades_ciutatagora.destacats}
-                    {if $smarty.foreach.destacats.iteration < 6 }
-                <div class="item">
-                    <div class="video">
-                        <div class="img">
-                            <a href="{$urlVideos}/{$item.id}">
-                                <img src="{$web_urlMedia}{$item.imatge_h}" alt="{$item.nom}" title="{$item.nom}"/>
-                            </a>
-                            <div class="boto-play">
-                                <a class="btn gran" href="{$urlVideos}/{$item.id}">
-                                    Play
-                                </a>
-                            </div>
-                        </div>
-                        <div class="dades">
-                            <div class="linia1">
-                                <div>
-                                    {if isset($item.url_versio_original) && $item.url_versio_original != ''}
-                                        <a href="{$item.url_versio_original}" target="_blank">Veure vídeo original</a>
-                                    {/if}
-                                </div>
-                                <div>
-                                    {if isset($item.url_subtitols) && $item.url_subtitols != ''}
-                                        <a href="{$item.url_subtitols}" target="_blank">Veure en versió subtitulada</a>
-                                    {/if}
-                                </div>
-                                <div>
-                                    {if isset($item.url_podcast) && $item.url_podcast != ''}
-                                        <a href="{$item.url_podcast}" target="_blank">Escoltar només en pòdcast</a>
-                                    {/if}
-                                </div>
-                            </div>
-                            <div class="linia2">
-                                <div class="projecte-durada">
-                                    <div>
-                                        <a class="btn {$item.projecte|normaliza}" href="{$urlProjectes}/{$item.id_projecte}">{$item.projecte}</a>
-                                    </div>
-                                    <div class="durada">
-                                        {$item.durada}
-                                    </div>
-                                </div>
-                                <div>
-                                    {if $item.autors !=''}
-                                        {assign var="autors" value=explode("#",$item.autors)}
-                                        {foreach name=autors item=item_autor from=$autors}
-                                            {assign var="autor" value=explode(":",$item_autor)}
-                                            <a href="{$urlAutors}/{$autor[1]}">{$autor[0]}</a><br/>
-    {*                                        {if !$smarty.foreach.autors.last}*}
-    {*                                            <span>, </span>*}
-    {*                                        {/if}*}
-                                        {/foreach}
-                                    {/if}
-                                    <div class="text-negreta">{$item.nom}</div>
-                                </div>
-                                <div class="text-negreta">
-                                    {$item.resum}
-                                </div>
-                            </div>
-                        </div>
+            <div class="escolarsDiv indicsDiv">
+                <h3>Indicadors escolars</h3>
+                <ul>
+                    <li>Nº alumnes amb necessitats educatives</li>
+                    <li>Ajuts material escolar</li>
+                    <li>Rendiment acadèmic</li>
+                    <li>Índex alumnat amb cognom estranger</li>
+                    <li>Índex demanda escolarització a I3</li>
+                    <li>Índex demanda escolarització a 1r d’ESO</li>
+                    <li>Graduació 4t d’ESO</li>
+                    <li>Distribució matrícula viva</li>
+                </ul>
+                <a class="socioeAnchor" href="#">Indicadors escolars</a>
+            </div>
+
+        </div>
+        <div class="interaccioDiv" id="mapa">
+            <div class="interaccioTitleDiv">
+                <h2>Context educatiu de Manresa</h2>
+                <p>Mapa interactiu del conjunt de centres educatius que es troben a Manresa.</p>
+            </div>
+            <div class="interaccioMapDiv">
+                <div style="width: 100%"><iframe width="100%" height="700" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=es&amp;q=Manresa,%20Barcelona+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+        <div class="contacteDiv" id="contacte">
+            <h1>Contacte</h1>
+            <div class="contacteFlex">
+                <div class="dades">
+                    <h3>Utilitza les següents vies de contacte o omple el formulari.</h3>
+                    <p>Correu electrònic</p>
+                    <h3>observatorieducacio@umanresa.cat</h3>
+                    <p>Xarxes socials</p>
+                    <h3>@observatorieducaciomanresa</h3>
+                </div>
+                <div class="inputs">
+                    <div class="mailName">
+                        <input type="text" id="name" name="name" placeholder="Nom">
+                        <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
+                        <br>
                     </div>
-                    <div class="barra">
-
+                    <div class="mailName messageDiv">
+                        <textarea type="text" id="Missatge" name="mail" placeholder="Missatge"></textarea>
+                    </div>
+                    <div class="sendDiv">
+                        <a class="socioeAnchor" href="">Enviar</a>
+                        <input type="text" id="sum" name="sum" placeholder="">
+                        <p class="random-sum">2+3 =</p>
                     </div>
                 </div>
-
-
-                    {/if}
-                {/foreach}
-            </div>
-        </section>
-    {/if}
-</main>
-<footer >
-    <div class="segueixnos">
-        <div class="subtitol">
-            Segueix-nos
-        </div>
-        <div class="caixa">
-            <div class="item"><a href="#">Instagram</a></div>
-            <div class="item"><a href="#">Facebook</a></div>
-            <div class="item"><a href="#">Youtube</a></div>
-        </div>
-    </div>
-    <div class="item contacte">
-        <div class="subtitol">
-            Contacte
-        </div>
-        <div class="caixa">
-            <div class="item">
-                <p>
-                    Pl. Major 1, Manresa<br/>
-                    <a href="mailto:ajt@ajmanresa.cat">ajt@ajmanresa.cat</a><br/>
-                    <a href="tel:938782300">938782300</a>
-                </p>
-            </div>
-            <div class="item">
-                <p>
-                    2022 &copy;<br/>
-                    Crèdits<br/>
-                    Informació legal<br/>
-                </p>
-            </div>
-            <div class="item">
-                <a href="https://www.manresa.cat" target="_blank"><img class="logo_ajmanresa" src="{$web_urlImg}Aj_Manresa.svg" alt="Ajuntament de Manresa"/></a>
-            </div>
-        </div>
-
-    </div>
-    <div class="suport">
-        <div class="subtitol">
-            Amb el suport
-        </div>
-        <div class="caixa">
-            <div class="item">
-                <img src="{$web_urlImg}Diputacio_barcelona.svg" alt="Diputació de Barcelona"/>
-            </div>
-            <div class="item">
-                <img src="{$web_urlImg}UPC.svg" alt="Universitat Politècnica de Catalunya"/>
-            </div>
-            <div class="item">
-                <img src="{$web_urlImg}Manresa_transforma.svg" alt="Manresa 2022"/>
-            </div>
-            <div class="item">
-                <img src="{$web_urlImg}UManresa.svg" alt="UManresa"/>
             </div>
         </div>
     </div>
-</footer>
-
-<script type="text/javascript" src="{$web_urlJs}init.js"></script>
+    <footer>
+        <div class="footerText">
+            Observatori per l'equitat i la igualtat d'oportunitats educatives - Tots els drets reservats
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <!-- Materialize Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
+
 </html>

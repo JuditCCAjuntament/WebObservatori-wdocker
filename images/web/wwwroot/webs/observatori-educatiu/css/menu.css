@@ -1,0 +1,222 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Open Sans",Arial,sans-serif;
+    min-height: 100vh;
+}
+nav {
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+    height: 17vh;
+    position: fixed;
+}
+
+nav ul li:hover {
+    background-color: white;
+}
+
+nav .moibleSearch:hover {
+    background-color: white;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.mobileHolder{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.logo-img {
+    margin-top: 1vh;
+    height: 11vh;
+    align-self: flex-start;
+}
+
+.menu-text {
+    color: #742369 !important;
+    font-weight: 600;
+    font-size: 18px;
+    font-size: calc(100%) !important;
+}
+
+nav i.material-icons {
+    display: inline;
+    vertical-align: middle;
+    color: #742369;
+}
+
+.mainBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collapsibleItems {
+    position: fixed;
+    margin-top: 17vh;
+    display: none;
+    min-width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: #ffffff00;
+    background-color: rgba(255, 255, 255, 0.85);
+    justify-items: right;
+    border-bottom-width: 3px;
+    border-bottom-color: #742369;
+    
+}
+
+.collapsibleItems a {
+    padding: 25px;
+
+}
+
+.collapsibleItems a:hover {
+    transition: background-color .3s;
+    background-color: rgba(233, 233, 233, 0.479);
+}
+.submenu{
+    margin-left: 10px;
+}
+
+hr{
+    width: 80%;
+    border-top-color:rgba(250, 235, 215, 0.301);
+    height: 1px;
+}
+
+.submenu li a{
+    color: #742369cb;
+    font-size: calc(120%) !important;
+}
+.mobileNavContainer{
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 30vh;
+    border: solid #742369 5vh;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    
+}
+
+.moibleSearch{
+    display: none;
+}
+@media only screen and (max-width: 720px) {
+    nav {
+        transition: all 0.4s ease-in-out;
+        height: 16vh;
+        position: fixed;
+        justify-content: center;
+    }
+
+    .logo-img {
+        z-index: 999;
+        margin-top: 20px;
+        height: 7vh;
+    }
+
+    .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    nav i.material-icons {
+        color: #742369;
+        font-size: 18px;
+        font-size: calc(250%)
+    }
+    .menu-text{
+        font-weight: 800;
+        font-size: calc(130%) !important;
+        
+    }
+    .mainBody{
+        padding-top: 13vh;
+    }
+    .goBack{
+        padding: 0px;
+    }
+    .searchTrigger{
+        padding: 0px;
+    }
+    .mobileHolder{
+        width: 100%;
+    }
+    .moibleSearch{
+        z-index: -10;
+        margin-top: -25px;
+        padding-left: 10px;
+        width: 100vw;
+        height: fit-content;
+        display: block;
+       
+
+    }
+    .moibleSearch nuclia-search{
+        z-index: -10;
+        margin: 0px;
+        width: 95%;
+    }
+    
+
+}
+
+footer{
+    background-color: #222222;
+    padding-top: 200px;
+    width: 100%;
+}
+
+.footerText{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(18, 18, 18);
+    text-align: left;
+    color: #666;
+    font-size: 18px !important;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    padding-top: 20px;
+    padding-bottom: 30px;
+    float: left;
+    
+
+}
+.searchContainer{
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+}
+.searchContainer .goBack{
+    padding: 10px;
+}
+
+.goBack:hover{
+    background-color: #22222234;
+}
+nuclia-search{
+    display: inline-block;
+    width: 32vw;
+
+    color: black;
+}

@@ -1,0 +1,52 @@
+iframe{
+    margin: 50px;
+    margin-bottom: 100px;
+}
+.socioTitle{
+    width: 100%;
+    height: 30vh;
+    margin-top: 17vh;
+    background-image: url("../res/img/socioeBackground.png");
+    padding-left: 20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5vh;
+}
+.socioTitle h2{
+    font-size: 36px;
+    color: #611d58!important;
+    font-weight:900;
+}
+
+.demoTitle{
+    width: 100%;
+    height: 30vh;
+    margin-top: 17vh;
+    background-image: url("../res/img/demoBackground.png");
+    padding-left: 20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5vh;
+}
+.demoTitle h2{
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.589)!important;
+    font-weight:900;
+}
+
+.escolTitle{
+    width: 100%;
+    height: 30vh;
+    margin-top: 17vh;
+    background-image: url("../res/img/escolarBackground.png");
+    padding-left: 20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5vh;
+}
+.escolTitle h2{
+    font-size: 40px;
+    color: #245d9b!important;
+    font-weight:900;
+}
+
