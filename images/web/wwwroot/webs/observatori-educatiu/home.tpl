@@ -1,4 +1,3 @@
-
 {assign var="web_title" value="Observatori per l'equitat i la igualtat d'oportunitats educacives | Manresa"}
 
 {assign var="web_urlImgDefault" value="assets-default/img/"}
@@ -13,6 +12,9 @@
 {assign var="materialize_framework_css" value="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"}
 {assign var="jquery_cdn" value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"}
 {assign var="nuclia_search" value="https://cdn.nuclia.cloud/nuclia-widget.umd.js"}
+{assign var="gmap_url" 
+    value="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=es&amp;q=Manresa,%20Barcelona+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,17 +25,17 @@
     <title>{$web_title}</title>
     <link rel="icon" type="image/x-icon" href="{$web_urlImg}observatori.png">
     <!-- Google icons -->
-    <link href={$google_Icons} rel="stylesheet">
+    <link href="{$google_Icons}" rel="stylesheet">
     <!-- materialize -->
-    <link rel="stylesheet" href={$materialize_framework_css}>
+    <link rel="stylesheet" href="{$materialize_framework_css}">
     <!-- JQuery -->
-    <script src={$jquery_cdn}
+    <script src="{$jquery_cdn}"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link href={$open_sans} rel="stylesheet">
+    <link href="{$open_sans}" rel="stylesheet">
     <!-- Nuclia search cdn -->
-    <script src={$nuclia_search}></script>
+    <script src="{$nuclia_search}"></script>
 
     <link rel="stylesheet" href="{$web_urlCss}menu.css">
     <link rel="stylesheet" href="{$web_urlCss}title.css">
@@ -51,7 +53,7 @@
         <div class="nav-wrapper">
             <div class="mobileHolder">
                 <div class="imgContainer">
-                    <img class=" brand-logobrowser-default logo-img" src="res/img/logo-observatori-educacio.jpg"
+                    <img class=" brand-logobrowser-default logo-img" src="{$web_urlImg}logo-observatori-educacio.jpg"
                         alt="Img not Found">
                 </div>
                 <div class="linksContainer">
@@ -64,20 +66,20 @@
                         <li><a class="menu-text" href="index.html#mapa">Divulgació</a></li>
                         <li><a class="menu-text" href="index.html#contacte">Contacte</a></li>
                         <li><a class="searchTrigger"><i class="material-icons">search</i></li>
-    
+
                     </ul>
                 </div>
                 <div class="searchContainer">
                     <nuclia-search class="notMobile" knowledgebox="efe163df-f88a-4c28-8602-89d555213cd5" zone="europe-1"
                         type="popup" features="navigateToLink"></nuclia-search>
-                    <a class="goBack"><i class="material-icons">arrow_back_ios_new</i>
+                    <a class="goBack"><i class="material-icons">arrow_back_ios_new</i></a>
                 </div>
             </div>
             <div class="moibleSearch">
-            
+
             </div>
         </div>
-        
+
     </nav>
 
     <ul class="sidenav mobileNavContainer" id="mobile-demo">
@@ -118,7 +120,7 @@
                     igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
                     agents d’interès les dades recollides.
                 </p>
-                <img src="res/img/observatori.png" alt="Image not found" id="sobreLobservatoriID">
+                <img src="{$web_urlImg}observatori.png" alt="Image not found" id="sobreLobservatoriID">
             </div>
             <div class="perqueImportantDiv aboutSuvDiv">
                 <h2>Per què és important l’Observatori?</h2>
@@ -146,7 +148,7 @@
 
         </div>
         <div class="conceptualMapDiv">
-            <img src="res/img/mapa.jpg" alt="" id="conceptualMapID">
+            <img src="{$web_urlImg}mapa.jpg" alt="" id="conceptualMapID">
         </div>
         <div class="indicadorsDiv " id="indocadors">
             <div class="socioeDiv indicsDiv">
@@ -156,7 +158,7 @@
                     <li>Renta familiar disponible bruta</li>
                     <li>Índex socioeconòmic del territori</li>
                 </ul>
-                <a class="socioeAnchor" href="#">Indicadors socioeconòmics</a>
+                <a class="socioeAnchor" href="indicadorsSocio.html">Indicadors socioeconòmics</a>
             </div>
             <div class="demograDiv indicsDiv">
                 <h3>Indicadors demogràfics</h3>
@@ -165,7 +167,7 @@
                     <li>Nivell d’estudis assolit</li>
                     <li>Nivell instrucció famílies</li>
                 </ul>
-                <a class="socioeAnchor" href="#">Indicadors demogràfics</a>
+                <a class="socioeAnchor" href="indicadorsDemo.html">Indicadors demogràfics</a>
             </div>
             <div class="escolarsDiv indicsDiv">
                 <h3>Indicadors escolars</h3>
@@ -179,7 +181,7 @@
                     <li>Graduació 4t d’ESO</li>
                     <li>Distribució matrícula viva</li>
                 </ul>
-                <a class="socioeAnchor" href="#">Indicadors escolars</a>
+                <a class="socioeAnchor" href="indicadorsEscolars.html">Indicadors escolars</a>
             </div>
 
         </div>
@@ -190,8 +192,7 @@
             </div>
             <div class="interaccioMapDiv">
                 <div style="width: 100%"><iframe width="100%" height="700" frameborder="0" scrolling="no"
-                        marginheight="0" marginwidth="0"
-                        src="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=es&amp;q=Manresa,%20Barcelona+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        marginheight="0" marginwidth="0" src="{$gmap_url}">
                     </iframe>
                 </div>
             </div>
@@ -203,7 +204,7 @@
                 <div class="dades">
                     <h3>Utilitza les següents vies de contacte o omple el formulari.</h3>
                     <p>Correu electrònic</p>
-                    <h3>observatorieducacio@umanresa.cat</h3>
+                    <h3><a href="mailto:observatorieducacio@umanresa.cat">observatorieducacio@umanresa.cat</a></h3>
                     <p>Xarxes socials</p>
                     <h3>@observatorieducaciomanresa</h3>
                 </div>
