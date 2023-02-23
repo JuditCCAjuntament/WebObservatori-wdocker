@@ -6,7 +6,7 @@ iframe{
     width: 100%;
     height: 30vh;
     margin-top: 17vh;
-    background-image: url("../res/img/socioeBackground.png");
+    background-image: url("/observatoriequitat/assets/socioeBackground.png");
     padding-left: 20vw;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +22,7 @@ iframe{
     width: 100%;
     height: 30vh;
     margin-top: 17vh;
-    background-image: url("../res/img/demoBackground.png");
+    background-image: url("/observatoriequitat/assets/img/demoBackground.png");
     padding-left: 20vw;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@ iframe{
     width: 100%;
     height: 30vh;
     margin-top: 17vh;
-    background-image: url("../res/img/escolarBackground.png");
+    background-image: url("/observatoriequitat/assets/img/escolarBackground.png");
     padding-left: 20vw;
     background-repeat: no-repeat;
     background-size: cover;
