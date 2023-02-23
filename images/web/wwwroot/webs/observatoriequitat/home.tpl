@@ -59,7 +59,7 @@
                 <div class="linksContainer">
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
-                        <li><a class="menu-text" href="{$portal.id}">Sobre l’observatori</a></li>
+                        <li><a class="menu-text" href="{$portal.menu[0].url}">$portal.menu[0].titol</a></li>
                         <li><a class="menu-text" href="index.html#conceptualMapID">Mapa conceptual</a></li>
                         <li><a class="menu-text collapsibleIndicadors" href="index.html#indicadors">Indicadors<i
                                     class="material-icons">expand_more</i></a></li>
