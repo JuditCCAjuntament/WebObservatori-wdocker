@@ -1,5 +1,0 @@
-FROM eu.gcr.io/websmunicipals/api-component:devel-v1
-
-COPY apache2/default.conf /etc/apache2/sites-enabled/000-default.conf
-COPY --chown=www-data:www-data wwwroot/app/DB/login.php /var/www/html/app/DB/
-

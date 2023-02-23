@@ -1,68 +1,17 @@
 version: '3.1'
 
 services:
-#database engine service
-  mysql_db:
-    container_name: mysql
-    image: mysql:5.7
-    restart: always
-    ports:
-      - 3306:3306
-    volumes:
-        #allow *.sql, *.sql.gz, or *.sh and is execute only if data directory is empty
-      - ./dbfiles:/docker-entrypoint-initdb.d
-    environment:
-      MYSQL_USER: ciutat_agora
-      MYSQL_DATABASE: ciutat_agora
-      MYSQL_ROOT_PASSWORD: qwerty
-      MYSQL_PASSWORD: qwerty
-#database admin service
-  adminer:
-    container_name: adminer
-    image: adminer
-    restart: always
-    depends_on:
-      - mysql_db
-    ports:
-       - 9090:8080
   redis:
     container_name: redis
     image: redis:4.0-alpine
     restart: always
-
-  ciutat-agora-api:
-    build:
-      context: ./images/api
-      dockerfile: Dockerfile.devel
-    container_name: ciutat-agora-api-devel
-    environment:
-      - REDIS_HOST=redis
-      - DB_HOST=mysql_db
-      - MYSQL_USER=ciutat_agora
-      - MYSQL_PASSWORD=qwerty
-      - URL_API_USUARIS=https://web.manresa.cat/api/usuaris/
-      - URL_API_MEDIA=https://web.manresa.cat/api/media/
-      - IP=37.14.150.212
-    depends_on:
-      - mysql_db
-      - redis
-    ports:
-      - 8080:80
-    volumes:
-      #allow *.sql, *.sql.gz, or *.sh and is execute only if data directory is empty
-      - ./images/api/wwwroot/app/api:/var/www/html/app/api
-      - ./images/api/tests:/var/www/html/tests
-
-  ciutat-agora-web:
+  observatori-educatiu-web:
     build:
       context: ./images/web
       dockerfile: Dockerfile.devel
-    container_name: ciutat-agora-web-devel
+    container_name: observatori-educatiu-web-devel
     environment:
       - REDIS_HOST=redis
-      - URL_API_CIUTATAGORA_LOCAL=ciutat-agora-api
-      - URL_API_CIUTATAGORA_DEVEL=https://dev.manresa.cat/api/ciutatagora
-      - URL_API_CIUTATAGORA_PROD=https://web.manresa.cat/api/ciutatagora
       - URL_API_WEB_DEVEL=https://api-devel-v2.manresa.cat/api/web
       - URL_API_WEB_PROD=https://api-v2.manresa.cat/api/web
       - URL_API_AGENDA_DEVEL=https://api-devel-v2.manresa.cat/api/agenda
@@ -77,6 +26,4 @@ services:
       - 80:80
     volumes:
       #allow *.sql, *.sql.gz, or *.sh and is execute only if data directory is empty
-      - ./images/web/wwwroot/webs/ciutatagora:/var/www/html/web/webs/ciutatagora
-      - ./images/web/wwwroot/WebApi/ciutatAgora:/var/www/html/web/WebApi/ciutatAgora
-      - ./images/web/wwwroot/gestors/ciutatAgora.class.php:/var/www/html/web/gestors/ciutatAgora.class.php
+      - ./images/web/wwwroot/webs/observatori-educatiu:/var/www/html/web/webs/observatori-educatiu

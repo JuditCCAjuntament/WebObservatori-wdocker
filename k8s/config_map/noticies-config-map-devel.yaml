@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: noticies-api-configmap
-  namespace: stage
-data:
-  #  DB_HOST: mysql.default.svc.cluster.local
-  URL_API_NOTICIES_PROD: https://www.manresa.cat/api_noticies/api/noticies
