@@ -32,7 +32,7 @@ nav .moibleSearch:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
 }
 
 .logo-img {
@@ -205,7 +205,7 @@ footer{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 60%;
+    width: 70%;
 }
 .searchContainer .goBack{
     padding: 10px;
