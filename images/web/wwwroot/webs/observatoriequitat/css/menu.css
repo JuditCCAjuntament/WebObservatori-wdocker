@@ -205,7 +205,7 @@ footer{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    width: 100%;
 }
 .searchContainer .goBack{
     padding: 10px;
