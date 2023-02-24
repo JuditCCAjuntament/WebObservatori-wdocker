@@ -3,7 +3,7 @@ $(document).ready(function () {
     $(".socioTitle").appendTo(".mainBody");
     $(".escolTitle").appendTo(".mainBody");
     $(".demoTitle").appendTo(".mainBody");
-    $("iframe").appendTo(".mainBody");
+    $(".bi").appendTo(".mainBody");
     $(".titol").remove();
     $(".descripcio").remove();
     
