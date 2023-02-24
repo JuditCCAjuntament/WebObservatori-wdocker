@@ -61,6 +61,7 @@ nav i.material-icons {
 }
 
 .collapsibleItems {
+    z-index: 999;
     position: fixed;
     margin-top: 17vh;
     display: none;

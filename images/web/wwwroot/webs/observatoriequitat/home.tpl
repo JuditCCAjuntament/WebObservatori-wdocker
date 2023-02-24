@@ -112,8 +112,8 @@
     <div class="mainBody">
         <div class="collapsibleItems">
             <a class="menu-text" href="/observatoriequitat/menu/15391/">{$portal.menu[2].fills[0].titol}</a>
-            <a class="menu-text" href="indicadorsDemo.html">{$portal.menu[2].fills[1].titol}</a>
-            <a class="menu-text" href="indicadorsEscolars.html">{$portal.menu[2].fills[1].titol}</a>
+            <a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
+            <a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
         </div>
 
         <div class="mainTitle">
