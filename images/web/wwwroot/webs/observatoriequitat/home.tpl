@@ -3,6 +3,9 @@
 {assign var="web_urlImgDefault" value="assets-default/img/"}
 {assign var="web_urlMedia" value=$urlMedia}
 
+{assign var="web_description" value=$portal.meta_description}
+{assign var="web_canonical" value=$portal.canonical}
+
 {assign var="web_urlCss" value="assets/css/"}
 {assign var="web_urlJs" value="assets/js/"}
 {assign var="web_urlImg" value="assets/img/"}
@@ -37,6 +40,7 @@
     <!-- Nuclia search cdn -->
     <script src="{$nuclia_search}"></script>
 
+    <link rel="canonical" href="{$web_canonical}" />
     <link rel="stylesheet" href="{$web_urlCss}menu.css">
     <link rel="stylesheet" href="{$web_urlCss}title.css">
     <link rel="stylesheet" href="{$web_urlCss}about.css">
@@ -44,6 +48,7 @@
     <link rel="stylesheet" href="{$web_urlCss}indicadors.css">
     <link rel="stylesheet" href="{$web_urlCss}gmap.css">
     <link rel="stylesheet" href="{$web_urlCss}contacte.css">
+    <link rel="stylesheet" href="{$web_urlCss}iframes.css">
 
 </head>
 
@@ -59,12 +64,13 @@
                 <div class="linksContainer">
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
-                        <li><a class="menu-text" href="{$portal.menu[0].url}" >{$portal.menu[0].titol}</a></li>
-                        <li><a class="menu-text" href="index.html#conceptualMapID">Mapa conceptual</a></li>
-                        <li><a class="menu-text collapsibleIndicadors" href="index.html#indicadors">Indicadors<i
+                        <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
+                        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
+                        <li><a class="menu-text collapsibleIndicadors"
+                                href="{$portal.menu[2].url}">{$portal.menu[2].titol}<i
                                     class="material-icons">expand_more</i></a></li>
-                        <li><a class="menu-text" href="index.html#mapa">Divulgació</a></li>
-                        <li><a class="menu-text" href="index.html#contacte">Contacte</a></li>
+                        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
+                        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
                         <li><a class="searchTrigger"><i class="material-icons">search</i></li>
 
                     </ul>
@@ -83,41 +89,41 @@
     </nav>
 
     <ul class="sidenav mobileNavContainer" id="mobile-demo">
-        <li><a class="menu-text" href="index.html#sobreLobservatoriID">Sobre l’observatori</a></li>
+        <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
         <hr>
-        <li><a class="menu-text" href="index.html#conceptualMapID">Mapa conceptual</a></li>
+        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
         <hr>
         <li>
             <a class="menu-text" href="index.html#indicadors">Indicadors</a>
             <ul class="submenu">
-                <li><a href="indicadorsSocio.html">Indicadors Socioeconòmics</a></li>
-                <li><a href="indicadorsDemo.html">Indicadors Demogràfics</a></li>
+                <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
+                <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
                 <li><a href="indicadorsEscolars.html">Indicadors Escolars</a></li>
 
             </ul>
         </li>
         <hr>
-        <li><a class="menu-text" href="index.html#mapa">Divulgació</a></li>
+        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
         <hr>
-        <li><a class="menu-text" href="index.html#contacte">Contacte</a></li>
+        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
         <hr>
     </ul>
 
     <div class="mainBody">
         <div class="collapsibleItems">
-            <a class="menu-text" href="indicadorsSocio.html">Indicadors Socioeconòmics</a>
-            <a class="menu-text" href="indicadorsDemo.html">Idicadors Demogràfics</a>
-            <a class="menu-text" href="indicadorsEscolars.html">Indicadors Escolars</a>
+            <a class="menu-text" href="/observatoriequitat/menu/15391/">{$portal.menu[2].fills[0].titol}</a>
+            <a class="menu-text" href="indicadorsDemo.html">{$portal.menu[2].fills[1].titol}</a>
+            <a class="menu-text" href="indicadorsEscolars.html">{$portal.menu[2].fills[1].titol}</a>
         </div>
 
         <div class="mainTitle">
             <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
         </div>
-    {if $dump_string}
-        {foreach name=dumps item=item from=$dump_string}
-            <div>{$item}</div>
-        {/foreach}
-    {/if}
+        {if $dump_string}
+            {foreach name=dumps item=item from=$dump_string}
+                <div>{$item}</div>
+            {/foreach}
+        {/if}
         <div class="aboutDiv">
             <div class="sobreLobservatoriDiv aboutSuvDiv">
                 <h2>Sobre l’Observatori</h2>
@@ -155,7 +161,7 @@
         <div class="conceptualMapDiv">
             <img src="{$web_urlImg}mapa.jpg" alt="" id="conceptualMapID">
         </div>
-        <div class="indicadorsDiv " id="indocadors">
+        <div class="indicadorsDiv " id="indicadors">
             <div class="socioeDiv indicsDiv">
                 <h3>Indicadors socioeconòmics</h3>
                 <ul>

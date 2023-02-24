@@ -5,23 +5,20 @@
 
 {assign var="web_urlImgDefault" value="assets-default/img/"}
 {assign var="web_urlMedia" value=$urlMedia}
-
-{assign var="urlVideos" value="menu/15049-videos"}
-{assign var="urlProjectes" value="menu/15050-projectes"}
-{assign var="urlAutors" value="menu/15051-autors"}
-
 {assign var="web_urlCss" value="assets/css/"}
 {assign var="web_urlJs" value="assets/js/"}
 {assign var="web_urlImg" value="assets/img/"}
 {assign var="web_urlHelper" value="`$portal.dir_template`/helpers/"}
 
-{if isset($pagina.meta_description) && $pagina.meta_description != ''}
-    {assign var="web_meta_description" value=$pagina.meta_description}
-{elseif isset($pagina.titol)}
-    {assign var="web_meta_description" value=$pagina.titol}
-{else}
-    {assign var="web_meta_description" value=""}
-{/if}
+{assign var="google_Icons" value="https://fonts.googleapis.com/icon?family=Material+Icons"}
+{assign var="open_sans" value="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900"}
+{assign var="materialize_framework_css" value="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"}
+{assign var="jquery_cdn" value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"}
+{assign var="nuclia_search" value="https://cdn.nuclia.cloud/nuclia-widget.umd.js"}
+{assign var="gmap_url" 
+    value="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=es&amp;q=Manresa,%20Barcelona+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"}
+
+
 
 {if isset($pagina.titol)}
     {assign var="web_meta_title" value="`$pagina.titol` - `$web_title`"}
@@ -32,15 +29,18 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="ca">
+
 <head>
+    <meta charset="UTF-8">
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="pragma" content="no-cache"/>
-    <meta http-equiv="expires" content="-1"/>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{$web_description}"/>
+    <meta name="description" content="{$web_description}" />
 
     <base href="{$portal.urlBase}/" />
     <title>{$web_meta_title}</title>
@@ -50,192 +50,107 @@
 
     <link rel="canonical" href="{$web_canonical}" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="all">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{$web_urlCss}estils.css" media="all"/>
+    <title>{$web_title}</title>
+    <link rel="icon" type="image/x-icon" href="{$web_urlImg}observatori.png">
+    <!-- Google icons -->
+    <link href="{$google_Icons}" rel="stylesheet">
+    <!-- materialize -->
+    <link rel="stylesheet" href="{$materialize_framework_css}">
+    <!-- JQuery -->
+    <script src="{$jquery_cdn}"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!--[if lt IE 9]>
-    <link href="/css/bootstrap/ie_patch.css" rel="stylesheet">
+    <link href="{$open_sans}" rel="stylesheet">
+    <!-- Nuclia search cdn -->
+    <script src="{$nuclia_search}"></script>
 
-    <script src="/js/html5shiv.min.js" type="text/javascript" async="async"></script>
-    <script type="text/javascript" src="/js/respond/respond.min.js"  async="async"></script>
-    <![endif]-->
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="canonical" href="{$web_canonical}" />
+    <link rel="stylesheet" href="{$web_urlCss}menu.css">
+    <link rel="stylesheet" href="{$web_urlCss}title.css">
+    <link rel="stylesheet" href="{$web_urlCss}about.css">
+    <link rel="stylesheet" href="{$web_urlCss}map.css">
+    <link rel="stylesheet" href="{$web_urlCss}indicadors.css">
+    <link rel="stylesheet" href="{$web_urlCss}gmap.css">
+    <link rel="stylesheet" href="{$web_urlCss}contacte.css">
+    <link rel="stylesheet" href="{$web_urlCss}iframes.css">
+    <link rel="stylesheet" href="{$web_urlCss}estils.css">
 
 </head>
+
 <body>
+    <!-- Nav -->
+    <nav class="white">
+        <div class="nav-wrapper">
+            <div class="mobileHolder">
+                <div class="imgContainer">
+                    <img class=" brand-logobrowser-default logo-img" src="{$web_urlImg}logo-observatori-educacio.jpg"
+                        alt="Img not Found">
+                </div>
+                <div class="linksContainer">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="hide-on-med-and-down">
+                        <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
+                        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
+                        <li><a class="menu-text collapsibleIndicadors"
+                                href="{$portal.menu[2].url}">{$portal.menu[2].titol}<i
+                                    class="material-icons">expand_more</i></a></li>
+                        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
+                        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
+                        <li><a class="searchTrigger"><i class="material-icons">search</i></li>
 
-<header>
-    <div class="logo">
-        <div class="botoMenuMbl hide-on-large-only">
-            <a href="#" id="menuMbl" data-target="menuMobil" class="sidenav-trigger"><span class="material-icons">menu</span></a>
-        </div>
-        <div class="titol">
-            <a href="#">{$web_title}</a>
-        </div>
-    </div>
-    <div class="menu-header">
-        <div class="hide-on-med-and-down menu">
-            <a href="#" >
-                Inici
-            </a>
-            {assign var="submenuSel" value=""}
-            {foreach name=llistatmenu item=item from=$portal.menu}
-                {assign var="extern" value=""}
-                {assign var="desti" value="menu/`$item.idseo`"}
-                {assign var="menuTopSel" value=""}
+                    </ul>
+                </div>
+                <div class="searchContainer">
+                    <nuclia-search class="notMobile" knowledgebox="efe163df-f88a-4c28-8602-89d555213cd5" zone="europe-1"
+                        type="popup" features="navigateToLink"></nuclia-search>
+                    <a class="goBack"><i class="material-icons">arrow_back_ios_new</i></a>
+                </div>
+            </div>
+            <div class="moibleSearch">
 
-                {if isset($item.select) && $item.select == 1}
-                    {assign var="menuTopSel" value="select"}
-                    {if isset($item.fills)}
-                        {assign var="submenuSel" value=$item.fills}
-                    {/if}
-                {/if}
-
-                {if $item.url != "" }
-                    {assign var="desti" value=$item.url}
-                    {if $item.enllac_extern == 1}
-                        {assign var="extern" value="target=\"_blank\" "}
-                    {/if}
-
-                {/if}
-
-                {if $item.publicat == 1}
-                    <a href="{$desti}" {$extern} class="{$menuTopSel}">
-                        {$item.titol}
-                    </a>
-                {/if}
-            {/foreach}
-        </div>
-        <div class="hide-on-med-and-down cerca">
-            <a href="{$urlVideos}">
-                <span class="material-icons">search</span>
-            </a>
-
-        </div>
-
-    </div>
-    <div class="barra-inferior">
-        <div class="punxa">
-            <img src="{$web_urlImg}punxa2.png" alt="">
-        </div>
-    </div>
-    <div class="barra_groga"></div>
-    {if isset($mostrar_avis_cookies) && $mostrar_avis_cookies}
-        <div id="barracookies" class="avis_cookie white">
-            <div class="container">
-                <p>
-                    Aquest web utilitza galetes (cookies) per a oferir una millor experiència de navegació. Si continua navegant pel web, considerem que accepta la seva utilització.
-                </p>
-                <a href="javascript:acceptarCookies();void(0);" class="waves-effect waves-light btn">Acceptar</a>
             </div>
         </div>
-    {/if}
 
-</header>
-<ul id="menuMobil" class="sidenav leftside-navigation ps-container ps-active-y">
-    <li class="titolMenuMbl">
-        <a href="{$urlVideos}">
-            <span class="material-icons">search</span>
-        </a>
-        <a class="sidenav-close" href="#!">
-            <span class="material-icons">close</span>
-        </a>
-    </li>
-    <li class="menu-lateral">
-        {include file="`$web_urlHelper`template-menus_materialize.tpl" depth=0 urlHelper=$web_urlHelper menu=$portal.menu}
-    </li>
-</ul>
-<main>
-    {if $dump_string}
-        {foreach name=dumps item=item from=$dump_string}
-            <div>{$item}</div>
-        {/foreach}
-    {/if}
-    {if $submenuSel|teFillsVisibles}
-        <section class="menu-lateral hide-on-med-and-down">
-            {include file="`$web_urlHelper`template-menus_materialize.tpl" depth=0 menu=$submenuSel urlHelper=$web_urlHelper}
-        </section>
-    {/if}
-{*    {if isset($pagina.filAriadna) && $pagina.filAriadna}*}
-{*    <section class="filAriadna">*}
-{*        <a href="#" class="breadcrumb">Inici</a>*}
-{*        {foreach name=filAriana item=item from=$pagina.filAriadna }*}
-{*            <a href="menu/{$item.idseo}" class="breadcrumb">{$item.titol}</a>*}
-{*        {/foreach}*}
-{*    </section>*}
-{*    {/if}*}
-    <section class="contingut">
+    </nav>
+
+    <ul class="sidenav mobileNavContainer" id="mobile-demo">
+        <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
+        <hr>
+        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
+        <hr>
+        <li>
+            <a class="menu-text" href="index.html#indicadors">Indicadors</a>
+            <ul class="submenu">
+                <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
+                <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
+                <li><a href="indicadorsEscolars.html">Indicadors Escolars</a></li>
+
+            </ul>
+        </li>
+        <hr>
+        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
+        <hr>
+        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
+        <hr>
+    </ul>
+    <div class="mainBody">
         {if isset($portal.template_contingut) }
-            {include file=$portal.template_contingut web_urlMedia=$web_urlMedia}
+            {include file=$portal.template_contingut}
         {/if}
-    </section>
-</main>
-<footer >
-    <div class="segueixnos">
-        <div class="subtitol">
-            Segueix-nos
-        </div>
-        <div class="caixa">
-            <div class="item"><a href="#">Instagram</a></div>
-            <div class="item"><a href="#">Facebook</a></div>
-            <div class="item"><a href="#">Youtube</a></div>
-        </div>
     </div>
-    <div class="item contacte">
-        <div class="subtitol">
-            Contacte
+    <footer>
+        <div class="footerText">
+            Observatori per l'equitat i la igualtat d'oportunitats educatives - Tots els drets reservats
         </div>
-        <div class="caixa">
-            <div class="item">
-                <p>
-                    Pl. Major 1, Manresa<br/>
-                    <a href="mailto:ajt@ajmanresa.cat">ajt@ajmanresa.cat</a><br/>
-                    <a href="tel:938782300">938782300</a>
-                </p>
-            </div>
-            <div class="item">
-                <p>
-                    2022 &copy;<br/>
-                    Crèdits<br/>
-                    Informació legal<br/>
-                </p>
-            </div>
-            <div class="item">
-                <a href="https://www.manresa.cat" target="_blank"><img class="logo_ajmanresa" src="{$web_urlImg}Aj_Manresa.svg" alt="Ajuntament de Manresa"/></a>
-            </div>
-        </div>
-
-    </div>
-    <div class="suport">
-        <div class="subtitol">
-            Amb el suport
-        </div>
-        <div class="caixa">
-            <div class="item">
-                <img src="{$web_urlImg}Diputacio_barcelona.svg" alt="Diputació de Barcelona"/>
-            </div>
-            <div class="item">
-                <img src="{$web_urlImg}UPC.svg" alt="Universitat Politècnica de Catalunya"/>
-            </div>
-            <div class="item">
-                <img src="{$web_urlImg}Manresa_transforma.svg" alt="Manresa 2022"/>
-            </div>
-            <div class="item">
-                <img src="{$web_urlImg}UManresa.svg" alt="UManresa"/>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script type="text/javascript" src="{$web_urlJs}init.js"></script>
-
-
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/content.js"></script>
+    <!-- Materialize Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
+
 </html>
