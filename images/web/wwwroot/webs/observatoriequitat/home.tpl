@@ -118,23 +118,20 @@
             <a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
             <a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
         </div>
-        {if $dump_string}
-
-            {foreach name=dumps item=item from=$dump_string}
-                <div>{$item}</div>
-
-            {/foreach}
-
-        {/if}
-     <div class="mainBody">
-
-
-
-
+ 
 
             <div class="mainTitle">
                 <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
+                
             </div>
+            {if $dump_string}
+
+                {foreach name=dumps item=item from=$dump_string}
+                    <div>{$item}</div>
+
+                {/foreach}
+
+            {/if}
             <div class="aboutDiv">
                 <div class="sobreLobservatoriDiv aboutSuvDiv">
                     <h2>Sobre l’Observatori</h2>
@@ -150,7 +147,8 @@
                         <li>Tenir informació constant i actualitzada del fenomen d’interès.</li>
                         <li>Diagnosticar i prioritzar les necessitats del col·lectiu d’interès.</li>
                         <li>Permet detectar canvis i monitoritzar tendències.</li>
-                        <li>Posa en contacte diferents agents que interaccionen/intervenen en un fenomen i permet coordinar
+                        <li>Posa en contacte diferents agents que interaccionen/intervenen en un fenomen i permet
+                            coordinar
                             la seva actuació.</li>
                         <li>Formular possibles escenaris futurs/anticipar situacions.</li>
                         <li>Donar a conèixer problemàtiques/situacions a la resta de la població.</li>
@@ -214,8 +212,8 @@
                 </div>
                 <div class="interaccioMapDiv">
                     <div style="width: 100%">
-                    <iframe width="100%" height="700" frameborder="0" scrolling="no"
-                            marginheight="0" marginwidth="0" src="{$gmap_url}">
+                        <iframe width="100%" height="700" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0" src="{$gmap_url}">
                         </iframe>
                     </div>
                 </div>
@@ -249,7 +247,8 @@
                 </div>
             </div>
         </div>
-        <footer>
+    </div>
+    <footer>
         <div class="footerText">
             Observatori per l'equitat i la igualtat d'oportunitats educatives - Tots els drets reservats
         </div>
