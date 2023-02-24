@@ -48,7 +48,6 @@
     <link rel="stylesheet" href="{$web_urlCss}indicadors.css">
     <link rel="stylesheet" href="{$web_urlCss}gmap.css">
     <link rel="stylesheet" href="{$web_urlCss}contacte.css">
-    <link rel="stylesheet" href="{$web_urlCss}iframes.css">
 
 </head>
 
@@ -96,9 +95,12 @@
         <li>
             <a class="menu-text" href="index.html#indicadors">Indicadors</a>
             <ul class="submenu">
-                <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
-                <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
-                <li><a href="indicadorsEscolars.html">Indicadors Escolars</a></li>
+                <li><a class="menu-text" href="/observatoriequitat/menu/15391/">{$portal.menu[2].fills[0].titol}</a>
+                </li>
+                <li><a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
+                </li>
+                <li><a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
+                </li>
 
             </ul>
         </li>
@@ -202,7 +204,8 @@
                 <p>Mapa interactiu del conjunt de centres educatius que es troben a Manresa.</p>
             </div>
             <div class="interaccioMapDiv">
-                <div style="width: 100%"><iframe width="100%" height="700" frameborder="0" scrolling="no"
+                <div style="width: 100%">
+                <iframe width="100%" height="700" frameborder="0" scrolling="no"
                         marginheight="0" marginwidth="0" src="{$gmap_url}">
                     </iframe>
                 </div>

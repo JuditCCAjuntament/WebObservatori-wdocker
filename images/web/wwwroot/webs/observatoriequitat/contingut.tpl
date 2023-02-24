@@ -73,7 +73,6 @@
     <link rel="stylesheet" href="{$web_urlCss}about.css">
     <link rel="stylesheet" href="{$web_urlCss}map.css">
     <link rel="stylesheet" href="{$web_urlCss}indicadors.css">
-    <link rel="stylesheet" href="{$web_urlCss}gmap.css">
     <link rel="stylesheet" href="{$web_urlCss}contacte.css">
     <link rel="stylesheet" href="{$web_urlCss}iframes.css">
     <link rel="stylesheet" href="{$web_urlCss}estils.css">
@@ -123,11 +122,14 @@
         <hr>
         <li>
             <a class="menu-text" href="index.html#indicadors">Indicadors</a>
-            <ul class="submenu">
-                <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
-                <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
-                <li><a href="indicadorsEscolars.html">Indicadors Escolars</a></li>
 
+            <ul class="submenu">
+                <li><a class="menu-text" href="/observatoriequitat/menu/15391/">{$portal.menu[2].fills[0].titol}</a>
+                </li>
+                <li><a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
+                </li>
+                <li><a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
+                </li>
             </ul>
         </li>
         <hr>
