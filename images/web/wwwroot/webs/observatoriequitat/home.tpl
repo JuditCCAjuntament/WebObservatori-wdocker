@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="{$web_urlCss}gmap.css">
     <link rel="stylesheet" href="{$web_urlCss}contacte.css">
 
+
 </head>
 
 <body>
@@ -117,130 +118,138 @@
             <a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
             <a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
         </div>
-
-        <div class="mainTitle">
-            <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
-        </div>
         {if $dump_string}
+
             {foreach name=dumps item=item from=$dump_string}
                 <div>{$item}</div>
+
             {/foreach}
+
         {/if}
-        <div class="aboutDiv">
-            <div class="sobreLobservatoriDiv aboutSuvDiv">
-                <h2>Sobre l’Observatori</h2>
-                <p>L’Observatori pretén ser una eina per a millorar el nivell de coneixement sobre l’equitat i la
-                    igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
-                    agents d’interès les dades recollides.
-                </p>
-                <img src="{$web_urlImg}observatori.png" alt="Image not found" id="sobreLobservatoriID">
-            </div>
-            <div class="perqueImportantDiv aboutSuvDiv">
-                <h2>Per què és important l’Observatori?</h2>
-                <ul>
-                    <li>Tenir informació constant i actualitzada del fenomen d’interès.</li>
-                    <li>Diagnosticar i prioritzar les necessitats del col·lectiu d’interès.</li>
-                    <li>Permet detectar canvis i monitoritzar tendències.</li>
-                    <li>Posa en contacte diferents agents que interaccionen/intervenen en un fenomen i permet coordinar
-                        la seva actuació.</li>
-                    <li>Formular possibles escenaris futurs/anticipar situacions.</li>
-                    <li>Donar a conèixer problemàtiques/situacions a la resta de la població.</li>
-                </ul>
-            </div>
-            <div class="poblacioInteressadaDiv aboutSuvDiv">
-                <h2>Població interessada</h2>
-                <ul>
-                    <li>Professorat</li>
-                    <li>Centres educatius </li>
-                    <li>Consells escolars</li>
-                    <li>AFA</li>
-                    <li>Ajuntaments</li>
-                    <li>Famílies</li>
-                </ul>
-            </div>
+     <div class="mainBody">
 
-        </div>
-        <div class="conceptualMapDiv">
-            <img src="{$web_urlImg}mapa.jpg" alt="" id="conceptualMapID">
-        </div>
-        <div class="indicadorsDiv " id="indicadors">
-            <div class="socioeDiv indicsDiv">
-                <h3>Indicadors socioeconòmics</h3>
-                <ul>
-                    <li>Taxa d’atur</li>
-                    <li>Renta familiar disponible bruta</li>
-                    <li>Índex socioeconòmic del territori</li>
-                </ul>
-                <a class="socioeAnchor" href="indicadorsSocio.html">Indicadors socioeconòmics</a>
-            </div>
-            <div class="demograDiv indicsDiv">
-                <h3>Indicadors demogràfics</h3>
-                <ul>
-                    <li>Nacionalitat</li>
-                    <li>Nivell d’estudis assolit</li>
-                    <li>Nivell instrucció famílies</li>
-                </ul>
-                <a class="socioeAnchor" href="indicadorsDemo.html">Indicadors demogràfics</a>
-            </div>
-            <div class="escolarsDiv indicsDiv">
-                <h3>Indicadors escolars</h3>
-                <ul>
-                    <li>Nº alumnes amb necessitats educatives</li>
-                    <li>Ajuts material escolar</li>
-                    <li>Rendiment acadèmic</li>
-                    <li>Índex alumnat amb cognom estranger</li>
-                    <li>Índex demanda escolarització a I3</li>
-                    <li>Índex demanda escolarització a 1r d’ESO</li>
-                    <li>Graduació 4t d’ESO</li>
-                    <li>Distribució matrícula viva</li>
-                </ul>
-                <a class="socioeAnchor" href="indicadorsEscolars.html">Indicadors escolars</a>
-            </div>
 
-        </div>
-        <div class="interaccioDiv" id="mapa">
-            <div class="interaccioTitleDiv">
-                <h2>Context educatiu de Manresa</h2>
-                <p>Mapa interactiu del conjunt de centres educatius que es troben a Manresa.</p>
+
+
+
+            <div class="mainTitle">
+                <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
             </div>
-            <div class="interaccioMapDiv">
-                <div style="width: 100%">
-                <iframe width="100%" height="700" frameborder="0" scrolling="no"
-                        marginheight="0" marginwidth="0" src="{$gmap_url}">
-                    </iframe>
+            <div class="aboutDiv">
+                <div class="sobreLobservatoriDiv aboutSuvDiv">
+                    <h2>Sobre l’Observatori</h2>
+                    <p>L’Observatori pretén ser una eina per a millorar el nivell de coneixement sobre l’equitat i la
+                        igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
+                        agents d’interès les dades recollides.
+                    </p>
+                    <img src="{$web_urlImg}observatori.png" alt="Image not found" id="sobreLobservatoriID">
                 </div>
-            </div>
-
-        </div>
-        <div class="contacteDiv" id="contacte">
-            <h1>Contacte</h1>
-            <div class="contacteFlex">
-                <div class="dades">
-                    <h3>Utilitza les següents vies de contacte o omple el formulari.</h3>
-                    <p>Correu electrònic</p>
-                    <h3><a href="mailto:observatorieducacio@umanresa.cat">observatorieducacio@umanresa.cat</a></h3>
-                    <p>Xarxes socials</p>
-                    <h3>@observatorieducaciomanresa</h3>
+                <div class="perqueImportantDiv aboutSuvDiv">
+                    <h2>Per què és important l’Observatori?</h2>
+                    <ul>
+                        <li>Tenir informació constant i actualitzada del fenomen d’interès.</li>
+                        <li>Diagnosticar i prioritzar les necessitats del col·lectiu d’interès.</li>
+                        <li>Permet detectar canvis i monitoritzar tendències.</li>
+                        <li>Posa en contacte diferents agents que interaccionen/intervenen en un fenomen i permet coordinar
+                            la seva actuació.</li>
+                        <li>Formular possibles escenaris futurs/anticipar situacions.</li>
+                        <li>Donar a conèixer problemàtiques/situacions a la resta de la població.</li>
+                    </ul>
                 </div>
-                <div class="inputs">
-                    <div class="mailName">
-                        <input type="text" id="name" name="name" placeholder="Nom">
-                        <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
-                        <br>
-                    </div>
-                    <div class="mailName messageDiv">
-                        <textarea type="text" id="Missatge" name="mail" placeholder="Missatge"></textarea>
-                    </div>
-                    <div class="sendDiv">
-                        <a class="socioeAnchor" href="">Enviar</a>
-                        <input type="text" id="sum" name="sum" placeholder="">
-                        <p class="random-sum">2+3 =</p>
+                <div class="poblacioInteressadaDiv aboutSuvDiv">
+                    <h2>Població interessada</h2>
+                    <ul>
+                        <li>Professorat</li>
+                        <li>Centres educatius </li>
+                        <li>Consells escolars</li>
+                        <li>AFA</li>
+                        <li>Ajuntaments</li>
+                        <li>Famílies</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="conceptualMapDiv">
+                <img src="{$web_urlImg}mapa.jpg" alt="" id="conceptualMapID">
+            </div>
+            <div class="indicadorsDiv " id="indicadors">
+                <div class="socioeDiv indicsDiv">
+                    <h3>Indicadors socioeconòmics</h3>
+                    <ul>
+                        <li>Taxa d’atur</li>
+                        <li>Renta familiar disponible bruta</li>
+                        <li>Índex socioeconòmic del territori</li>
+                    </ul>
+                    <a class="socioeAnchor" href="indicadorsSocio.html">Indicadors socioeconòmics</a>
+                </div>
+                <div class="demograDiv indicsDiv">
+                    <h3>Indicadors demogràfics</h3>
+                    <ul>
+                        <li>Nacionalitat</li>
+                        <li>Nivell d’estudis assolit</li>
+                        <li>Nivell instrucció famílies</li>
+                    </ul>
+                    <a class="socioeAnchor" href="indicadorsDemo.html">Indicadors demogràfics</a>
+                </div>
+                <div class="escolarsDiv indicsDiv">
+                    <h3>Indicadors escolars</h3>
+                    <ul>
+                        <li>Nº alumnes amb necessitats educatives</li>
+                        <li>Ajuts material escolar</li>
+                        <li>Rendiment acadèmic</li>
+                        <li>Índex alumnat amb cognom estranger</li>
+                        <li>Índex demanda escolarització a I3</li>
+                        <li>Índex demanda escolarització a 1r d’ESO</li>
+                        <li>Graduació 4t d’ESO</li>
+                        <li>Distribució matrícula viva</li>
+                    </ul>
+                    <a class="socioeAnchor" href="indicadorsEscolars.html">Indicadors escolars</a>
+                </div>
+
+            </div>
+            <div class="interaccioDiv" id="mapa">
+                <div class="interaccioTitleDiv">
+                    <h2>Context educatiu de Manresa</h2>
+                    <p>Mapa interactiu del conjunt de centres educatius que es troben a Manresa.</p>
+                </div>
+                <div class="interaccioMapDiv">
+                    <div style="width: 100%">
+                    <iframe width="100%" height="700" frameborder="0" scrolling="no"
+                            marginheight="0" marginwidth="0" src="{$gmap_url}">
+                        </iframe>
                     </div>
                 </div>
+
+            </div>
+            <div class="contacteDiv" id="contacte">
+                <h1>Contacte</h1>
+                <div class="contacteFlex">
+                    <div class="dades">
+                        <h3>Utilitza les següents vies de contacte o omple el formulari.</h3>
+                        <p>Correu electrònic</p>
+                        <h3><a href="mailto:observatorieducacio@umanresa.cat">observatorieducacio@umanresa.cat</a></h3>
+                        <p>Xarxes socials</p>
+                        <h3>@observatorieducaciomanresa</h3>
+                    </div>
+                    <div class="inputs">
+                        <div class="mailName">
+                            <input type="text" id="name" name="name" placeholder="Nom">
+                            <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
+                            <br>
+                        </div>
+                        <div class="mailName messageDiv">
+                            <textarea type="text" id="Missatge" name="mail" placeholder="Missatge"></textarea>
+                        </div>
+                        <div class="sendDiv">
+                            <a class="socioeAnchor" href="">Enviar</a>
+                            <input type="text" id="sum" name="sum" placeholder="">
+                            <p class="random-sum">2+3 =</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <footer>
+        <footer>
         <div class="footerText">
             Observatori per l'equitat i la igualtat d'oportunitats educatives - Tots els drets reservats
         </div>
