@@ -76,7 +76,7 @@
     <link rel="stylesheet" href="{$web_urlCss}contacte.css">
     <link rel="stylesheet" href="{$web_urlCss}iframes.css">
     <link rel="stylesheet" href="{$web_urlCss}estils.css">
-
+    <link rel="stylesheet" href="{$web_urlCss}gmap.css">
 </head>
 
 <body>
