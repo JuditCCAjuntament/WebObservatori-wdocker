@@ -94,7 +94,7 @@
 
 .contacteDiv p,a {
     font-size: 26px;
-    color: white;
+    color: white !important;
 }
 
 .sendDiv{
