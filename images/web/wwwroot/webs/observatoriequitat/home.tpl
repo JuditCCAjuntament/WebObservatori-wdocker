@@ -54,7 +54,11 @@
 </head>
 
 <body>
-
+    <script type="text/javascript">
+        if (window.location == "{$menus}15398/" || window.location == "{$menus}/") {
+            window.location = "{$menus}15398/";
+        }
+    </script>
     <!-- Nav -->
     <nav class="white">
         <div class="nav-wrapper">
@@ -258,9 +262,7 @@
     <script src="assets/js/main.js"></script>
     <!-- Materialize Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript">
-    window.location = "{$menus}15398/";
-</script>
+
 </body>
 
 </html>
