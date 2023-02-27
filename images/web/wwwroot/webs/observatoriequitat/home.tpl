@@ -56,9 +56,8 @@
 <body>
     <script type="text/javascript">
         console.log(window.location.href);
-        if (window.location.href == "{$menus}15398/" || window.location.href == "{$menus}/") {
             window.location = "{$menus}15398/";
-        }
+        
     </script>
     <!-- Nav -->
     <nav class="white">
