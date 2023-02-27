@@ -55,7 +55,7 @@
 
 <body>
     <script type="text/javascript">
-        if (window.location == "{$menus}15398/" || window.location == "{$menus}/") {
+        if (window.location.href == "{$menus}15398/" || window.location.href == "{$menus}/") {
             window.location = "{$menus}15398/";
         }
     </script>
