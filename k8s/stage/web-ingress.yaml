@@ -15,7 +15,7 @@ spec:
     - host: dev.manresa.cat
       http:
         paths:
-          - path: /observatoriquitat
+          - path: /observatoriequitat
             pathType: Prefix
             backend:
               service:
