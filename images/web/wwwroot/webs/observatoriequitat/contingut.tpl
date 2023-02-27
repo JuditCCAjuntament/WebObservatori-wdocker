@@ -17,7 +17,7 @@
 {assign var="nuclia_search" value="https://cdn.nuclia.cloud/nuclia-widget.umd.js"}
 {assign var="gmap_url" 
     value="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=es&amp;q=Manresa,%20Barcelona+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"}
-
+{assign var="menus" value="/observatoriequitat/menu/"}
 
 
 {if isset($pagina.titol)}
