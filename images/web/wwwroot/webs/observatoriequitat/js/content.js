@@ -9,7 +9,7 @@ $(document).ready(function () {
     $("conceptualMapDiv").appendTo(".mainBody");
     $(".indicadorsDiv").appendTo(".mainBody");
     $(".interaccioDiv").appendTo(".mainBody");
-    //$("contacteDiv").appendTo(".mainBody");
+    $("contacteDiv").appendTo(".mainBody");
 
     //$(".titol").remove();
     //$(".descripcio").remove();
