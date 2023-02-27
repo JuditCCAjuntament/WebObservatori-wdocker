@@ -18,12 +18,12 @@ stop-test-local:
 
 #comandes per poder fer els passos de pujar a kubernetes
 create-image:
-	docker build -t observatori-educatiu-web:latest images/web/ --no-cache
-	docker tag observatori-educatiu-web:latest eu.gcr.io/websmunicipals/observatori-educatiu-web:devel-latest
-	docker tag observatori-educatiu-web:latest eu.gcr.io/websmunicipals/observatori-educatiu-web:master-latest
+	docker build -t observatoriequitat-web:latest images/web/ --no-cache
+	docker tag observatoriequitat-web:latest eu.gcr.io/websmunicipals/observatoriequitat-web:devel-latest
+	docker tag observatoriequitat-web:latest eu.gcr.io/websmunicipals/observatoriequitat-web:master-latest
 upload-image:
-	docker push eu.gcr.io/websmunicipals/observatori-educatiu-web:devel-latest
-	docker push eu.gcr.io/websmunicipals/observatori-educatiu-web:master-latest
+	docker push eu.gcr.io/websmunicipals/observatoriequitat-web:devel-latest
+	docker push eu.gcr.io/websmunicipals/observatoriequitat-web:master-latest
 deploy-stage:
 	kubectl apply -f k8s/stage/
 deploy-prod:
