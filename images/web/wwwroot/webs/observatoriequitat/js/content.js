@@ -11,7 +11,7 @@ $(document).ready(function () {
     $(".interaccioDiv").appendTo(".mainBody");
     $("contacteDiv").appendTo(".mainBody");
 
-    //$(".titol").remove();
-    //$(".descripcio").remove();
+    $(".titol").remove();
+    $(".descripcio").remove();
     
 });
