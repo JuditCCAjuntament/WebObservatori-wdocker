@@ -8,7 +8,7 @@ services:
   observatori-educatiu-web:
     build:
       context: ./images/web
-      dockerfile: Dockerfile.devel
+      dockerfile: Dockerfile
     container_name: observatori-educatiu-web-devel
     environment:
       - REDIS_HOST=redis
