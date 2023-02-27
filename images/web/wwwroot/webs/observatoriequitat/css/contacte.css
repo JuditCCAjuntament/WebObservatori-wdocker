@@ -92,7 +92,12 @@
     color: white;
 }
 
-.contacteDiv p,a {
+.contacteDiv p {
+    font-size: 26px;
+    color: white !important;
+}
+
+.contacteDiv p a{
     font-size: 26px;
     color: white !important;
 }
