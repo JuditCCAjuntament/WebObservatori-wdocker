@@ -139,6 +139,12 @@
         <hr>
     </ul>
     <div class="mainBody">
+    {if $dump_string}
+
+        {foreach name=dumps item=item from=$dump_string}
+            <div>{$item}</div>
+
+        {/foreach}
         {if isset($portal.template_contingut) }
             {include file=$portal.template_contingut}
         {/if}
