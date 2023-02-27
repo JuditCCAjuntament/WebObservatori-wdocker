@@ -1,82 +1,17 @@
 version: '3.1'
 
 services:
-#database engine service
-  mysql_db:
-    container_name: mysql
-    image: mysql:5.7
-    restart: always
-    ports:
-      - 3306:3306
-    volumes:
-        #allow *.sql, *.sql.gz, or *.sh and is execute only if data directory is empty
-      - ./dbfiles:/docker-entrypoint-initdb.d
-    environment:
-      MYSQL_USER: ciutat_agora
-      MYSQL_DATABASE: ciutat_agora
-      MYSQL_ROOT_PASSWORD: qwerty
-      MYSQL_PASSWORD: qwerty
-#database admin service
-  adminer:
-    container_name: adminer
-    image: adminer
-    restart: always
-    depends_on: 
-      - mysql_db
-    ports:
-       - 9090:8080
   redis:
     container_name: redis
     image: redis:4.0-alpine
     restart: always
-
-  ciutat-agora-api:
-    build:
-      context: ./images/api
-      dockerfile: Dockerfile
-    container_name: ciutat-agora-api
-    environment:
-      - REDIS_HOST=redis
-      - DB_HOST=mysql_db
-      - MYSQL_USER=ciutat_agora
-      - MYSQL_PASSWORD=qwerty
-      - URL_API_USUARIS=https://web.manresa.cat/api/usuaris/
-      - URL_API_MEDIA=https://web.manresa.cat/api/media/
-      - IP=37.14.150.212
-    depends_on:
-      - mysql_db
-      - redis
-    ports:
-      - 8080:80
-
-#Billin app frontend service
-  ciutat-agora-admin:
-    build:
-      context: ./images/admin
-      dockerfile: Dockerfile
-    container_name: ciutat-agora-admin
-    depends_on:
-      - ciutat-agora-api
-    ports:
-      - 81:80
-    deploy:
-      resources:
-        limits:
-          cpus: "0.15"
-          memory: 256M
-        reservations:
-          cpus: "0.1"
-          memory: 128M
-  ciutat-agora-web:
+  observatori-educatiu-web:
     build:
       context: ./images/web
-      dockerfile: Dockerfile
-    container_name: ciutat-agora-web
+      dockerfile: Dockerfile.devel
+    container_name: observatori-educatiu-web-devel
     environment:
       - REDIS_HOST=redis
-      - URL_API_CIUTATAGORA_LOCAL=ciutat-agora-api
-      - URL_API_CIUTATAGORA_DEVEL=https://dev.manresa.cat/api/ciutatagora
-      - URL_API_CIUTATAGORA_PROD=https://web.manresa.cat/api/ciutatagora
       - URL_API_WEB_DEVEL=https://api-devel-v2.manresa.cat/api/web
       - URL_API_WEB_PROD=https://api-v2.manresa.cat/api/web
       - URL_API_AGENDA_DEVEL=https://api-devel-v2.manresa.cat/api/agenda
@@ -87,6 +22,8 @@ services:
       - URL_DOCS_MEDIA=https://web.manresa.cat/media/
     depends_on:
       - redis
-      - ciutat-agora-api
     ports:
       - 80:80
+    volumes:
+      #allow *.sql, *.sql.gz, or *.sh and is execute only if data directory is empty
+      - ./images/web/wwwroot/webs/observatoriequitat:/var/www/html/web/webs/observatoriequitat
