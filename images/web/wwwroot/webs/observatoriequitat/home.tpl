@@ -55,7 +55,7 @@
 
 <body>
 <script type="text/javascript">
-            window.location.replace("{$menus}15398/");
+            window.location = "{$menus}15398/";
         </script>
     <!-- Nav -->
     <nav class="white">
