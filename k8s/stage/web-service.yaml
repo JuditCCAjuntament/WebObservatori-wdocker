@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ciutat-agora-web-stage
+  name: observatoriequitat-web-stage
   labels:
-    app: ciutat-agora-web-stage
+    app: observatoriequitat-web-stage
   namespace: stage
 spec:
   selector:
-    app: ciutat-agora-web-stage
+    app: observatoriequitat-web-stage
   type: ClusterIP
   ports:
     - name: http

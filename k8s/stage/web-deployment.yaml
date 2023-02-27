@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ciutat-agora-web-stage
+  name: observatoriequitat-web-stage
   labels:
-    app: ciutat-agora-web-stage
+    app: observatoriequitat-web-stage
   namespace: stage
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ciutat-agora-web-stage
+      app: observatoriequitat-web-stage
   template:
     metadata:
-      name: ciutat-agora-web-stage
+      name: observatoriequitat-web-stage
       labels:
-        app: ciutat-agora-web-stage
+        app: observatoriequitat-web-stage
     spec:
       containers:
-      - name: ciutat-agora-web-stage
-        image: eu.gcr.io/websmunicipals/ciutat-agora-web:devel-latest
+      - name: observatoriequitat-web-stage
+        image: eu.gcr.io/websmunicipals/observatoriequitat-web:devel-latest
         imagePullPolicy: Always
         ports:
           - containerPort: 80
@@ -26,7 +26,7 @@ spec:
           - configMapRef:
               name: redis-4-server-configmap
           - configMapRef:
-              name: ciutat-agora-web-configmap
+              name: observatoriequitat-web-configmap
           - configMapRef:
               name: web-api-configmap
           - configMapRef:
