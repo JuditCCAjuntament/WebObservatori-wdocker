@@ -124,11 +124,11 @@
             <a class="menu-text" href="index.html#indicadors">Indicadors</a>
 
             <ul class="submenu">
-                <li><a class="menu-text" href="/observatoriequitat/menu/15391/">{$portal.menu[2].fills[0].titol}</a>
+                <li><a class="menu-text" href="{$menus}/15391/">{$portal.menu[2].fills[0].titol}</a>
                 </li>
-                <li><a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
+                <li><a class="menu-text" href="{$menus}/15395/">{$portal.menu[2].fills[1].titol}</a>
                 </li>
-                <li><a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
+                <li><a class="menu-text" href="{$menus}/15396/">{$portal.menu[2].fills[2].titol}</a>
                 </li>
             </ul>
         </li>

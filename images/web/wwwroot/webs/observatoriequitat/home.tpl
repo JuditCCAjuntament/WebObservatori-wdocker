@@ -17,6 +17,7 @@
 {assign var="nuclia_search" value="https://cdn.nuclia.cloud/nuclia-widget.umd.js"}
 {assign var="gmap_url" 
     value="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=es&amp;q=Manresa,%20Barcelona+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"}
+{assign var="menus" value="/observatoriequitat/menu/"}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,11 +97,11 @@
         <li>
             <a class="menu-text" href="index.html#indicadors">Indicadors</a>
             <ul class="submenu">
-                <li><a class="menu-text" href="/observatoriequitat/menu/15391/">{$portal.menu[2].fills[0].titol}</a>
+                <li><a class="menu-text" href="{$menus}15391/">{$portal.menu[2].fills[0].titol}</a>
                 </li>
-                <li><a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
+                <li><a class="menu-text" href="{$menus}15395/">{$portal.menu[2].fills[1].titol}</a>
                 </li>
-                <li><a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
+                <li><a class="menu-text" href="{$menus}15396/">{$portal.menu[2].fills[2].titol}</a>
                 </li>
 
             </ul>
@@ -114,9 +115,9 @@
 
     <div class="mainBody">
         <div class="collapsibleItems">
-            <a class="menu-text" href="/observatoriequitat/menu/15391/">{$portal.menu[2].fills[0].titol}</a>
-            <a class="menu-text" href="/observatoriequitat/menu/15395/">{$portal.menu[2].fills[1].titol}</a>
-            <a class="menu-text" href="/observatoriequitat/menu/15396/">{$portal.menu[2].fills[2].titol}</a>
+            <a class="menu-text" href="{$menus}/15391/">{$portal.menu[2].fills[0].titol}</a>
+            <a class="menu-text" href="{$menus}/15395/">{$portal.menu[2].fills[1].titol}</a>
+            <a class="menu-text" href="{$menus}/15396/">{$portal.menu[2].fills[2].titol}</a>
         </div>
  
 
@@ -223,11 +224,11 @@
                 <h1>Contacte</h1>
                 <div class="contacteFlex">
                     <div class="dades">
-                        <h3>Utilitza les següents vies de contacte o omple el formulari.</h3>
-                        <p>Correu electrònic</p>
-                        <h3><a href="mailto:observatorieducacio@umanresa.cat">observatorieducacio@umanresa.cat</a></h3>
-                        <p>Xarxes socials</p>
-                        <h3>@observatorieducaciomanresa</h3>
+                        <p>Utilitza les següents vies de contacte o omple el formulari.</p>
+                        <h3>Correu electrònic</h3>
+                        <p><a href="mailto:observatorieducacio@umanresa.cat">observatorieducacio@umanresa.cat</a></p>
+                        <h3>Xarxes socials</h3>
+                        <p>@observatorieducaciomanresa</p>
                     </div>
                     <div class="inputs">
                         <div class="mailName">
