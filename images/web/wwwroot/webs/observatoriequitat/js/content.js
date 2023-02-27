@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(".bi").appendTo(".mainBody");
     $(".mainTitle").appendTo(".mainBody");
     $(".aboutDiv").appendTo(".mainBody");
-    $("conceptualMapDiv").appendTo(".mainBody");
+    $(".conceptualMapDiv").appendTo(".mainBody");
     $(".indicadorsDiv").appendTo(".mainBody");
     $(".interaccioDiv").appendTo(".mainBody");
     $(".contacteDiv").appendTo(".mainBody");
