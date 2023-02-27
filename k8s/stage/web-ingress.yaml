@@ -15,7 +15,7 @@ spec:
     - host: dev.manresa.cat
       http:
         paths:
-          - path: /ciutatagora
+          - path: /observatoriquitat
             pathType: Prefix
             backend:
               service:
