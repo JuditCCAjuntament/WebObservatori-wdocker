@@ -145,6 +145,7 @@
             <div>{$item}</div>
 
         {/foreach}
+    {/if}
         {if isset($portal.template_contingut) }
             {include file=$portal.template_contingut}
         {/if}
