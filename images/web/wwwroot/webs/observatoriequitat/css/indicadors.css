@@ -1,5 +1,6 @@
 .indicadorsDiv{
-    margin-top: 15vh;
+    margin-top: 10vh;
+    padding-top: 5vh;
     display: flex;
     align-items: flex-start;
     width: 100%;
