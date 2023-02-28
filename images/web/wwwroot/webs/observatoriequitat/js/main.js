@@ -2,7 +2,7 @@
 $(document).ready(function () {
   $('.sidenav').sidenav();
   console.log("Init");
-  if (window.matchMedia('(max-width: 720px)').matches) {
+  if (window.matchMedia('(max-width: 768px)').matches) {
     //Searchbar but the api is wrong
     $(".notMobile").appendTo(".moibleSearch");
     console.log("Moving");
