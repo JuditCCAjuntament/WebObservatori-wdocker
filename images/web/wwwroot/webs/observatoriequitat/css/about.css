@@ -1,3 +1,32 @@
+@media only screen and (max-width: 993px) {
+    .aboutDiv{
+        padding-left: 10%;
+        position: relative;
+        flex-direction: column;
+        padding: 0%;
+        width: 100%;
+        
+    }
+    .aboutSuvDiv{
+        width: 80%;
+        margin-left: 10%;
+        
+    }
+
+    .aboutSuvDiv h2{
+        font-size: 20px;
+        line-height: 2.3rem;
+    }
+    .aboutSuvDiv li{
+        list-style-position: inside !important;
+        list-style-type: disc !important;
+        margin-left: 2.3%;
+        margin-bottom: 2%;
+    }
+    .sobreLobservatoriDiv{
+        margin-top: 60%;
+    }
+}
 .aboutDiv{
     background-image: url("/observatoriequitat/assets/img/aboutBackground.png");
     background-size:cover;
@@ -64,33 +93,4 @@
 }
 .aboutSuvDiv h2{
     margin: 0px;
-}
-@media only screen and (max-width: 993px) {
-    .aboutDiv{
-        padding-left: 10%;
-        position: relative;
-        flex-direction: column;
-        padding: 0%;
-        width: 100%;
-        
-    }
-    .aboutSuvDiv{
-        width: 80%;
-        margin-left: 10%;
-        
-    }
-
-    .aboutSuvDiv h2{
-        font-size: 20px;
-        line-height: 2.3rem;
-    }
-    .aboutSuvDiv li{
-        list-style-position: inside !important;
-        list-style-type: disc !important;
-        margin-left: 2.3%;
-        margin-bottom: 2%;
-    }
-    .sobreLobservatoriDiv{
-        margin-top: 60%;
-    }
 }
