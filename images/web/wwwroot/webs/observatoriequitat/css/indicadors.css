@@ -117,8 +117,12 @@
     }
     .indicsDiv{
         margin: 0px;
+        margin-top: 20px;
     }
- }
+    .socioeDiv , .demograDiv, .escolarsDiv{
+        margin: 0px;
+    }
+}
 
 @media only screen and (max-width: 768px) { 
     .indicadorsDiv{
