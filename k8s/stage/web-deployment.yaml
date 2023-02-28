@@ -26,8 +26,6 @@ spec:
           - configMapRef:
               name: redis-4-server-configmap
           - configMapRef:
-              name: observatoriequitat-web-configmap
-          - configMapRef:
               name: web-api-configmap
           - configMapRef:
               name: agenda-api-configmap
