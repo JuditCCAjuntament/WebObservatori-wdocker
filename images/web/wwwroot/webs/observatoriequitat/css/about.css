@@ -66,7 +66,7 @@
     margin: 0px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 830px) {
     .sobreLobservatoriDiv{
         margin-top: 60%;
     }
