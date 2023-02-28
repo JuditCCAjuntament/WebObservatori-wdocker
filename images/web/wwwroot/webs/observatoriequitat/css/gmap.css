@@ -29,6 +29,9 @@
         flex-direction: column;
 
     }
+    .interaccioTitleDiv h2{
+        font-size: 40px;
+    }
     .interaccioTitleDiv{
         display: flex;
         flex-direction: column;
