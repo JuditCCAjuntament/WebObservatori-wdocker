@@ -176,6 +176,7 @@ hr{
     }
     .mobileHolder{
         width: 95%;
+        justify-content: space-around;
     }
     
 
