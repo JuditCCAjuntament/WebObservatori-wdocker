@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 150px !important;
 }
 body{
     font-family: "Open Sans",Arial,sans-serif;
