@@ -129,6 +129,7 @@ hr{
         z-index: 999;
         margin-top: 20px;
         height: 7vh;
+        margin-right: 15px;
     }
 
     .nav-wrapper {
@@ -156,9 +157,6 @@ hr{
     .searchTrigger{
         padding: 0px;
     }
-    .mobileHolder{
-        width: 100%;
-    }
     .moibleSearch{
         z-index: -10;
         margin-top: -25px;
@@ -176,7 +174,7 @@ hr{
     }
     .mobileHolder{
         width: 95%;
-        justify-content: space-around;
+        justify-content: center;
     }
     
 
