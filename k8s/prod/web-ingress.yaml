@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-ciutat-agora-web
+  name: ingress-observatoriequitat-web
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/issuer: "letsencrypt-web-manresa-cat"
@@ -18,6 +18,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ciutat-agora-web
+                name: observatoriequitat-web
                 port:
                   number: 80
