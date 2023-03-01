@@ -78,6 +78,7 @@ window.location = "{$menus}15398/";
                                 <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
                             {/if}
                         {/foreach}
+                        <li><a class="searchTrigger"><i class="material-icons">search</i></li>
 
                     </ul>
                 </div>

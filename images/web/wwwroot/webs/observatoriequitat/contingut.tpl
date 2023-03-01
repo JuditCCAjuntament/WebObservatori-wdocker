@@ -99,6 +99,7 @@
                                 <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
                             {/if}
                         {/foreach}
+                        <li><a class="searchTrigger"><i class="material-icons">search</i></li>
                 </div>
                 <div class="searchContainer">
                     <nuclia-search class="notMobile" knowledgebox="efe163df-f88a-4c28-8602-89d555213cd5" zone="europe-1"
