@@ -54,11 +54,11 @@
 </head>
 
 <body>
-    <script type="text/javascript">
+    {* <script type="text/javascript">
         console.log(window.location.href);
             window.location = "{$menus}15398/";
         
-    </script>
+    </script> *}
     <!-- Nav -->
     <nav class="white">
         <div class="nav-wrapper">
@@ -140,15 +140,16 @@
             {/if}
             <div class="aboutDiv">
                 <div class="sobreLobservatoriDiv aboutSuvDiv">
-                    <h2>Sobre l’Observatori</h2>
+                   
+                {* <h2>Sobre l’Observatori</h2>
                     <p>L’Observatori pretén ser una eina per a millorar el nivell de coneixement sobre l’equitat i la
                         igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
                         agents d’interès les dades recollides.
                     </p>
-                    <img src="{$web_urlImg}observatori.png" alt="Image not found" id="sobreLobservatoriID">
+                    <img src="{$web_urlImg}observatori.png" alt="Image not found" id="sobreLobservatoriID"> *}
                 </div>
                 <div class="perqueImportantDiv aboutSuvDiv">
-                    <h2>Per què és important l’Observatori?</h2>
+                    {* <h2>Per què és important l’Observatori?</h2>
                     <ul>
                         <li>Tenir informació constant i actualitzada del fenomen d’interès.</li>
                         <li>Diagnosticar i prioritzar les necessitats del col·lectiu d’interès.</li>
@@ -158,10 +159,10 @@
                             la seva actuació.</li>
                         <li>Formular possibles escenaris futurs/anticipar situacions.</li>
                         <li>Donar a conèixer problemàtiques/situacions a la resta de la població.</li>
-                    </ul>
+                    </ul> *}
                 </div>
                 <div class="poblacioInteressadaDiv aboutSuvDiv">
-                    <h2>Població interessada</h2>
+                    {* <h2>Població interessada</h2>
                     <ul>
                         <li>Professorat</li>
                         <li>Centres educatius </li>
@@ -169,7 +170,7 @@
                         <li>AFA</li>
                         <li>Ajuntaments</li>
                         <li>Famílies</li>
-                    </ul>
+                    </ul> *}
                 </div>
 
             </div>
