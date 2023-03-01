@@ -54,7 +54,6 @@ nav i.material-icons {
     display: inline;
     vertical-align: middle;
     color: #742369;
-    transform: rotateZ(180deg);
 }
 
 .mainBody {
