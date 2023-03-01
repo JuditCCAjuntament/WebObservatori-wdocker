@@ -183,8 +183,8 @@ window.location = "{$menus}15398/";
                     <h3>Xarxes socials</h3>
                     <p>@observatorieducaciomanresa</p>
                 </div>
-                    {if array_key_exists('submit', $_POST)}
-                        <p>"DWWDWDWDDWDDWDWDWDWD</p>
+                    {if isset($_POST['submit'])}
+                        <p>"DWWDWDWDDWDDWDWDWD|count_words</p>
                     {/if}
                 <div class="inputs">
                     <form type="post">
