@@ -141,76 +141,22 @@
             <div class="aboutDiv" id="sobreLobservatoriID">
                 <div class="sobreLobservatoriDiv aboutSuvDiv">
                    {$vars.sobre_observatori.contingut}
-                {* <h2>Sobre l’Observatori</h2>
-                    <p>L’Observatori pretén ser una eina per a millorar el nivell de coneixement sobre l’equitat i la
-                        igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
-                        agents d’interès les dades recollides.
-                    </p>
-                    <img src="{$web_urlImg}observatori.png" alt="Image not found" id="sobreLobservatoriID"> *}
                 </div>
                 <div class="perqueImportantDiv aboutSuvDiv">
-                    {* <h2>Per què és important l’Observatori?</h2>
-                    <ul>
-                        <li>Tenir informació constant i actualitzada del fenomen d’interès.</li>
-                        <li>Diagnosticar i prioritzar les necessitats del col·lectiu d’interès.</li>
-                        <li>Permet detectar canvis i monitoritzar tendències.</li>
-                        <li>Posa en contacte diferents agents que interaccionen/intervenen en un fenomen i permet
-                            coordinar
-                            la seva actuació.</li>
-                        <li>Formular possibles escenaris futurs/anticipar situacions.</li>
-                        <li>Donar a conèixer problemàtiques/situacions a la resta de la població.</li>
-                    </ul> *}
+                {$vars.pk_important.contingut}
                 </div>
                 <div class="poblacioInteressadaDiv aboutSuvDiv">
-                    {* <h2>Població interessada</h2>
-                    <ul>
-                        <li>Professorat</li>
-                        <li>Centres educatius </li>
-                        <li>Consells escolars</li>
-                        <li>AFA</li>
-                        <li>Ajuntaments</li>
-                        <li>Famílies</li>
-                    </ul> *}
+                {$vars.poblacio_interessada.contingut}
                 </div>
 
             </div>
             <div class="conceptualMapDiv" id="conceptualMapID">
-                {* <img src="{$web_urlImg}mapa.jpg" alt="" id="conceptualMapID"> *}
+            {$vars.mapa_conceptual.contingut}
             </div>
             <div class="indicadorsDiv " id="indicadors">
-                {* <div class="socioeDiv indicsDiv">
-                    <h3>Indicadors socioeconòmics</h3>
-                    <ul>
-                        <li>Taxa d’atur</li>
-                        <li>Renta familiar disponible bruta</li>
-                        <li>Índex socioeconòmic del territori</li>
-                    </ul>
-                    <a class="socioeAnchor" href="indicadorsSocio.html">Indicadors socioeconòmics</a>
-                </div> *}
-                {* <div class="demograDiv indicsDiv">
-                    <h3>Indicadors demogràfics</h3>
-                    <ul>
-                        <li>Nacionalitat</li>
-                        <li>Nivell d’estudis assolit</li>
-                        <li>Nivell instrucció famílies</li>
-                    </ul>
-                    <a class="socioeAnchor" href="indicadorsDemo.html">Indicadors demogràfics</a>
-                </div> *}
-                {* <div class="escolarsDiv indicsDiv">
-                    <h3>Indicadors escolars</h3>
-                    <ul>
-                        <li>Nº alumnes amb necessitats educatives</li>
-                        <li>Ajuts material escolar</li>
-                        <li>Rendiment acadèmic</li>
-                        <li>Índex alumnat amb cognom estranger</li>
-                        <li>Índex demanda escolarització a I3</li>
-                        <li>Índex demanda escolarització a 1r d’ESO</li>
-                        <li>Graduació 4t d’ESO</li>
-                        <li>Distribució matrícula viva</li>
-                    </ul>
-                    <a class="socioeAnchor" href="indicadorsEscolars.html">Indicadors escolars</a>
-                </div> *}
-
+            {$vars.indicadors_socio.contingut}
+            {$vars.indicadors_demo.contingut}
+            {$vars.indicadors_escolars.contingut}
             </div>
             <div class="interaccioDiv" id="mapa">
                 <div class="interaccioTitleDiv">
