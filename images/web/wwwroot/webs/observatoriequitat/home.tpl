@@ -56,8 +56,8 @@
 <body>
     {* <script type="text/javascript">
         console.log(window.location.href);
-            window.location = "{$menus}15398/";
-        
+window.location = "{$menus}15398/";
+
     </script> *}
     <!-- Nav -->
     <nav class="white">
@@ -72,21 +72,12 @@
                     <ul class="hide-on-med-and-down">
                         {foreach from=$portal.menu item=menu}
                             {if $menu.titol == "Indicadors"}
-                                <li><a class="menu-text collapsibleIndicadors"
-                                href="{$menu.url}">{$menu.titol}<i
-                                    class="material-icons">expand_more</i></a></li>
+                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}">{$menu.titol}<i
+                                            class="material-icons">expand_more</i></a></li>
                             {else}
                                 <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
                             {/if}
                         {/foreach}
-                        {* <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
-                        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
-                        <li><a class="menu-text collapsibleIndicadors"
-                                href="{$portal.menu[2].url}">{$portal.menu[2].titol}<i
-                                    class="material-icons">expand_more</i></a></li>
-                        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
-                        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
-                        <li><a class="searchTrigger"><i class="material-icons">search</i></li> *}
 
                     </ul>
                 </div>
@@ -133,82 +124,82 @@
             <a class="menu-text" href="{$menus}/15395/">{$portal.menu[2].fills[1].titol}</a>
             <a class="menu-text" href="{$menus}/15396/">{$portal.menu[2].fills[2].titol}</a>
         </div>
- 
 
-            <div class="mainTitle">
-                <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
-                
+
+        <div class="mainTitle">
+            <h1>OBSERVATORI PER L’EQUITAT I LA <br> IGUALTAT D’OPORTUNITATS <br> EDUCATIVES</h1>
+
+        </div>
+        {if $dump_string}
+
+            {foreach name=dumps item=item from=$dump_string}
+                <div>{$item}</div>
+
+            {/foreach}
+
+        {/if}
+        <div class="aboutDiv" id="sobreLobservatoriID">
+            <div class="sobreLobservatoriDiv aboutSuvDiv">
+                {$vars.sobre_observatori.contingut}
             </div>
-            {if $dump_string}
-
-                {foreach name=dumps item=item from=$dump_string}
-                    <div>{$item}</div>  
-
-                {/foreach}
-
-            {/if}
-            <div class="aboutDiv" id="sobreLobservatoriID">
-                <div class="sobreLobservatoriDiv aboutSuvDiv">
-                   {$vars.sobre_observatori.contingut}
-                </div>
-                <div class="perqueImportantDiv aboutSuvDiv">
+            <div class="perqueImportantDiv aboutSuvDiv">
                 {$vars.pk_important.contingut}
-                </div>
-                <div class="poblacioInteressadaDiv aboutSuvDiv">
+            </div>
+            <div class="poblacioInteressadaDiv aboutSuvDiv">
                 {$vars.poblacio_interessada.contingut}
-                </div>
+            </div>
 
-            </div>
-            <div class="conceptualMapDiv" id="conceptualMapID">
+        </div>
+        <div class="conceptualMapDiv" id="conceptualMapID">
             {$vars.mapa_conceptual.contingut}
-            </div>
-            <div class="indicadorsDiv " id="indicadors">
+        </div>
+        <div class="indicadorsDiv " id="indicadors">
             {$vars.indicadors_socio.contingut}
             {$vars.indicadors_demo.contingut}
             {$vars.indicadors_escolars.contingut}
+        </div>
+        <div class="interaccioDiv" id="mapa">
+            <div class="interaccioTitleDiv">
+                <h2>Context educatiu de Manresa</h2>
+                <p>Mapa interactiu del conjunt de centres educatius que es troben a Manresa.</p>
             </div>
-            <div class="interaccioDiv" id="mapa">
-                <div class="interaccioTitleDiv">
-                    <h2>Context educatiu de Manresa</h2>
-                    <p>Mapa interactiu del conjunt de centres educatius que es troben a Manresa.</p>
+            <div class="interaccioMapDiv">
+                <div style="width: 100%">
+                    <iframe width="100%" height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="{$gmap_url}">
+                    </iframe>
                 </div>
-                <div class="interaccioMapDiv">
-                    <div style="width: 100%">
-                        <iframe width="100%" height="700" frameborder="0" scrolling="no" marginheight="0"
-                            marginwidth="0" src="{$gmap_url}">
-                        </iframe>
-                    </div>
-                </div>
+            </div>
 
-            </div>
-            <div class="contacteDiv" id="contacte">
-                <h1>Contacte</h1>
-                <div class="contacteFlex">
-                    <div class="dades">
-                        <p>Utilitza les següents vies de contacte o omple el formulari.</p>
-                        <h3>Correu electrònic</h3>
-                        <p><a href="mailto:observatorieducacio@umanresa.cat">observatorieducacio@umanresa.cat</a></p>
-                        <h3>Xarxes socials</h3>
-                        <p>@observatorieducaciomanresa</p>
+        </div>
+        <div class="contacteDiv" id="contacte">
+            <h1>Contacte</h1>
+            <div class="contacteFlex">
+                <div class="dades">
+                    <p>Utilitza les següents vies de contacte o omple el formulari.</p>
+                    <h3>Correu electrònic</h3>
+                    <p><a href="mailto:observatorieducacio@umanresa.cat">observatorieducacio@umanresa.cat</a></p>
+                    <h3>Xarxes socials</h3>
+                    <p>@observatorieducaciomanresa</p>
+                </div>
+                <div class="inputs">
+                    <div class="mailName">
+                        <input type="text" id="name" name="name" placeholder="Nom">
+                        <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
+                        <br>
                     </div>
-                    <div class="inputs">
-                        <div class="mailName">
-                            <input type="text" id="name" name="name" placeholder="Nom">
-                            <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
-                            <br>
-                        </div>
-                        <div class="mailName messageDiv">
-                            <textarea type="text" id="Missatge" name="mail" placeholder="Missatge"></textarea>
-                        </div>
-                        <div class="sendDiv">
-                            <a class="socioeAnchor" href="">Enviar</a>
-                            <input type="text" id="sum" name="sum" placeholder="">
-                            <p class="random-sum">2+3 =</p>
-                        </div>
+                    <div class="mailName messageDiv">
+                        <textarea type="text" id="Missatge" name="mail" placeholder="Missatge"></textarea>
+                    </div>
+                    <div class="sendDiv">
+                        <a class="socioeAnchor" href="">Enviar</a>
+                        <input type="text" id="sum" name="sum" placeholder="">
+                        <p class="random-sum">2+3 =</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer>
         <div class="footerText">

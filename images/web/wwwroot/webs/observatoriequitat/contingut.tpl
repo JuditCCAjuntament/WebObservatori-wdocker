@@ -91,16 +91,14 @@
                 <div class="linksContainer">
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
-                        <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
-                        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
-                        <li><a class="menu-text collapsibleIndicadors"
-                                href="{$portal.menu[2].url}">{$portal.menu[2].titol}<i
-                                    class="material-icons">expand_more</i></a></li>
-                        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
-                        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
-                        <li><a class="searchTrigger"><i class="material-icons">search</i></li>
-
-                    </ul>
+                        {foreach from=$portal.menu item=menu}
+                            {if $menu.titol == "Indicadors"}
+                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}">{$menu.titol}<i
+                                            class="material-icons">expand_more</i></a></li>
+                            {else}
+                                <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
+                            {/if}
+                        {/foreach}
                 </div>
                 <div class="searchContainer">
                     <nuclia-search class="notMobile" knowledgebox="efe163df-f88a-4c28-8602-89d555213cd5" zone="europe-1"
@@ -139,13 +137,13 @@
         <hr>
     </ul>
     <div class="mainBody">
-    {if $dump_string}
+        {if $dump_string}
 
-        {foreach name=dumps item=item from=$dump_string}
-            <div>{$item}</div>
+            {foreach name=dumps item=item from=$dump_string}
+                <div>{$item}</div>
 
-        {/foreach}
-    {/if}
+            {/foreach}
+        {/if}
         {if isset($portal.template_contingut) }
             {include file=$portal.template_contingut}
         {/if}
