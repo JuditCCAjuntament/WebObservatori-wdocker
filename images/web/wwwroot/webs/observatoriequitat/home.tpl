@@ -70,6 +70,9 @@
                 <div class="linksContainer">
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
+                        {foreach from=$portal.menu item=menu}
+                            <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
+                        {/foreach}
                         <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
                         <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
                         <li><a class="menu-text collapsibleIndicadors"
