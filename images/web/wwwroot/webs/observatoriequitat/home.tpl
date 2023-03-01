@@ -183,14 +183,8 @@ window.location = "{$menus}15398/";
                     <h3>Xarxes socials</h3>
                     <p>@observatorieducaciomanresa</p>
                 </div>
-                    {if isset($_POST['submit'])}
-                        <?php 
-                        echo "<script>window.close();</script>"
-                        
-                        ?>
-                    {/if}
                 <div class="inputs">
-                    <form type="post">
+                    <form action="mail.php">
                         <div class="mailName">
                             <input type="text" id="name" name="name" placeholder="Nom">
                             <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
