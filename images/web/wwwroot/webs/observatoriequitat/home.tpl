@@ -197,7 +197,7 @@ window.location = "{$menus}15398/";
                         ()=>{
                             {$msg = $_POST['message'] + $_POST['name'] + $_POST['mail'];;}
                             {mail("judit.closa@ajmanresa.cat","Test missatge",$msg);}
-                        }
+                        };
                     {/if}
                         <a class="socioeAnchor" href="" name="submit">Enviar</a>
                         <input type="text" id="sum" name="sum" placeholder="">
