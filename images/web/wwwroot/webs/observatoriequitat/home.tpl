@@ -190,10 +190,16 @@ window.location = "{$menus}15398/";
                         <br>
                     </div>
                     <div class="mailName messageDiv">
-                        <textarea type="text" id="Missatge" name="mail" placeholder="Missatge"></textarea>
+                        <textarea type="text" id="Missatge" name="message" placeholder="Missatge"></textarea>
                     </div>
                     <div class="sendDiv">
-                        <a class="socioeAnchor" href="">Enviar</a>
+                    {if isset($_POST['submit'])}
+                        ()=>{
+                            {$msg = $_POST['message'] + $_POST['name'] + $_POST['mail'];;}
+                            {mail("judit.closa@ajmanresa.cat","Test missatge",$msg);}
+                        }
+                    {/if}
+                        <a class="socioeAnchor" href="" name="submit">Enviar</a>
                         <input type="text" id="sum" name="sum" placeholder="">
                         <p class="random-sum">2+3 =</p>
                     </div>
