@@ -185,7 +185,7 @@ window.location = "{$menus}15398/";
                 </div>
                     {if isset($_POST['submit'])}
                         <?php 
-                        {echo "<script>window.close();</script>"}
+                        echo "<script>window.close();</script>"
                         
                         ?>
                     {/if}
