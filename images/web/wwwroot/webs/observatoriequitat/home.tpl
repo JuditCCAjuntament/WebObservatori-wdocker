@@ -140,7 +140,7 @@
             {/if}
             <div class="aboutDiv" id="sobreLobservatoriID">
                 <div class="sobreLobservatoriDiv aboutSuvDiv">
-                   
+                   {$portal.vars.sobre_observatori.content.contingut}
                 {* <h2>Sobre l’Observatori</h2>
                     <p>L’Observatori pretén ser una eina per a millorar el nivell de coneixement sobre l’equitat i la
                         igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
