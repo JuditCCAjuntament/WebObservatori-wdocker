@@ -16,6 +16,10 @@ nav {
 nav ul li:hover {
     background-color: white;
 }
+nav ul li:hover i{
+    transform: rotateZ(180deg);
+}
+
 
 nav .moibleSearch:hover {
     background-color: white;
