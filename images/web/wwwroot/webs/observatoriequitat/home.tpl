@@ -18,7 +18,7 @@
 {assign var="gmap_url" 
     value="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=es&amp;q=Manresa,%20Barcelona+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"}
 {assign var="menus" value="/observatoriequitat/menu/"}
-
+{assign var="vars" value=$portal.vars}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -140,7 +140,7 @@
             {/if}
             <div class="aboutDiv" id="sobreLobservatoriID">
                 <div class="sobreLobservatoriDiv aboutSuvDiv">
-                   {$portal.vars.sobre_observatori.content.contingut}
+                   {$vars.sobre_observatori.contingut}
                 {* <h2>Sobre l’Observatori</h2>
                     <p>L’Observatori pretén ser una eina per a millorar el nivell de coneixement sobre l’equitat i la
                         igualtat d’oportunitats educatives, així com també apropar i difondre a la població de Manresa i
