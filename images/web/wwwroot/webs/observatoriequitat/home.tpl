@@ -133,12 +133,12 @@
             {if $dump_string}
 
                 {foreach name=dumps item=item from=$dump_string}
-                    <div>{$item}</div>
+                    <div>{$item}</div>  
 
                 {/foreach}
 
             {/if}
-            <div class="aboutDiv">
+            <div class="aboutDiv" id="sobreLobservatoriID">
                 <div class="sobreLobservatoriDiv aboutSuvDiv">
                    
                 {* <h2>Sobre l’Observatori</h2>
@@ -174,11 +174,11 @@
                 </div>
 
             </div>
-            <div class="conceptualMapDiv">
-                <img src="{$web_urlImg}mapa.jpg" alt="" id="conceptualMapID">
+            <div class="conceptualMapDiv" id="conceptualMapID">
+                {* <img src="{$web_urlImg}mapa.jpg" alt="" id="conceptualMapID"> *}
             </div>
             <div class="indicadorsDiv " id="indicadors">
-                <div class="socioeDiv indicsDiv">
+                {* <div class="socioeDiv indicsDiv">
                     <h3>Indicadors socioeconòmics</h3>
                     <ul>
                         <li>Taxa d’atur</li>
@@ -186,8 +186,8 @@
                         <li>Índex socioeconòmic del territori</li>
                     </ul>
                     <a class="socioeAnchor" href="indicadorsSocio.html">Indicadors socioeconòmics</a>
-                </div>
-                <div class="demograDiv indicsDiv">
+                </div> *}
+                {* <div class="demograDiv indicsDiv">
                     <h3>Indicadors demogràfics</h3>
                     <ul>
                         <li>Nacionalitat</li>
@@ -195,8 +195,8 @@
                         <li>Nivell instrucció famílies</li>
                     </ul>
                     <a class="socioeAnchor" href="indicadorsDemo.html">Indicadors demogràfics</a>
-                </div>
-                <div class="escolarsDiv indicsDiv">
+                </div> *}
+                {* <div class="escolarsDiv indicsDiv">
                     <h3>Indicadors escolars</h3>
                     <ul>
                         <li>Nº alumnes amb necessitats educatives</li>
@@ -209,7 +209,7 @@
                         <li>Distribució matrícula viva</li>
                     </ul>
                     <a class="socioeAnchor" href="indicadorsEscolars.html">Indicadors escolars</a>
-                </div>
+                </div> *}
 
             </div>
             <div class="interaccioDiv" id="mapa">
