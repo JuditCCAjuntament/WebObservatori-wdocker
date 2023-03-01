@@ -184,7 +184,10 @@ window.location = "{$menus}15398/";
                     <p>@observatorieducaciomanresa</p>
                 </div>
                     {if isset($_POST['submit'])}
+                        <?php 
                         {echo "<script>window.close();</script>"}
+                        
+                        ?>
                     {/if}
                 <div class="inputs">
                     <form type="post">
