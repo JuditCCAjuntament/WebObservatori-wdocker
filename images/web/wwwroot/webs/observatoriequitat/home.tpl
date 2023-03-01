@@ -194,6 +194,7 @@ window.location = "{$menus}15398/";
                     </div>
                     <div class="sendDiv">
                     {if isset($_POST['submit'])}
+                        <script>console.log("Contecte test");<script>
                         {$msg = $_POST['message'] + $_POST['name'] + $_POST['mail']}
                         {mail("judit.closa@ajmanresa.cat","Test missatge",$msg)}
                     {/if}
