@@ -183,25 +183,25 @@ window.location = "{$menus}15398/";
                     <h3>Xarxes socials</h3>
                     <p>@observatorieducaciomanresa</p>
                 </div>
-                <div class="inputs">
-                    <div class="mailName">
-                        <input type="text" id="name" name="name" placeholder="Nom">
-                        <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
-                        <br>
-                    </div>
-                    <div class="mailName messageDiv">
-                        <textarea type="text" id="Missatge" name="message" placeholder="Missatge"></textarea>
-                    </div>
-                    <div class="sendDiv">
-                    {if isset($_POST['submit'])}
-                        <script>console.log("Contecte test");<script>
-                        {$msg = $_POST['message'] + $_POST['name'] + $_POST['mail']}
-                        {mail("judit.closa@ajmanresa.cat","Test missatge",$msg)}
+                    {if array_key_exists('submit', $_POST)}
+                        <p>"DWWDWDWDDWDDWDWDWDWD</p>
                     {/if}
-                        <a class="socioeAnchor" href="" name="submit">Enviar</a>
-                        <input type="text" id="sum" name="sum" placeholder="">
-                        <p class="random-sum">2+3 =</p>
-                    </div>
+                <div class="inputs">
+                    <form type="post">
+                        <div class="mailName">
+                            <input type="text" id="name" name="name" placeholder="Nom">
+                            <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
+                            <br>
+                        </div>
+                        <div class="mailName messageDiv">
+                            <textarea type="text" id="Missatge" name="message" placeholder="Missatge"></textarea>
+                        </div>
+                        <div class="sendDiv">
+                            <a class="socioeAnchor" type="submit" name="submit">Enviar</a>
+                            <input type="text" id="sum" name="sum" placeholder="">
+                            <p class="random-sum">2+3 =</p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
