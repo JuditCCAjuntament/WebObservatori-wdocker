@@ -49,6 +49,8 @@ nav .moibleSearch:hover {
     font-size: 18px;
     font-size: calc(100%) !important;
 }
+
+
 nav i.material-icons {
     display: inline;
     vertical-align: middle;
