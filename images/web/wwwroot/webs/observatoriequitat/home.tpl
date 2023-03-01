@@ -184,7 +184,7 @@ window.location = "{$menus}15398/";
                     <p>@observatorieducaciomanresa</p>
                 </div>
                 <div class="inputs">
-                    <form action="mail.php">
+
                         <div class="mailName">
                             <input type="text" id="name" name="name" placeholder="Nom">
                             <input type="text" id="mail" name="mail" placeholder="Correu electrònic">
@@ -194,11 +194,11 @@ window.location = "{$menus}15398/";
                             <textarea type="text" id="Missatge" name="message" placeholder="Missatge"></textarea>
                         </div>
                         <div class="sendDiv">
-                            <a class="socioeAnchor" type="submit" name="submit">Enviar</a>
+                            <a class="socioeAnchor">Enviar</a>
                             <input type="text" id="sum" name="sum" placeholder="">
                             <p class="random-sum">2+3 =</p>
                         </div>
-                    </form>
+
                 </div>
             </div>
         </div>
