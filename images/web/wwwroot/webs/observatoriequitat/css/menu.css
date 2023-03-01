@@ -50,6 +50,14 @@ nav .moibleSearch:hover {
     font-size: calc(100%) !important;
 }
 
+.menu-text:hover i{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: all .3s ease;
+}
+
 nav i.material-icons {
     display: inline;
     vertical-align: middle;
