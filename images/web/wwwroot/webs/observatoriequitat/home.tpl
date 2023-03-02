@@ -108,7 +108,7 @@ window.location = "{$menus}15398/";
                             {else}
                                 {assign var="link" value=$submenu.url}
                             {/if}
-                            {if $submenu.publicat}
+                            {if $submenu.publicat < 2}
                                 <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
                             {/if}
                             {/foreach}
