@@ -76,7 +76,7 @@ window.location = "{$menus}15398/";
                                     {assign var="expand" value=false}
                                     {foreach from=$menu.fills item=submenu}
                                         {if $submenu == 1}
-                                            {$expand = true}
+                                            {assign var="expand" value=true}
                                         {/if}
                                     {/foreach}
                                     {if $expand}
