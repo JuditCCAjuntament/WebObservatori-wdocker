@@ -16,7 +16,10 @@ $(".collapsibleIndicadors").hover(
     let id = this.id;
     console.log("Hovered In Menu"+id);
     $(".collapsibleItems").children().each(( index )=>{
-        console.log(index + " " +  $(this).attr("id"));
+        //console.log(index + " " +  $(this).attr("id"));
+        if($(this).attr("id") == id){
+          console.log("MATCH!: "+index);
+        }
     });
     
     
