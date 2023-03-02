@@ -28,3 +28,11 @@ deploy-stage:
 	kubectl apply -f k8s/stage/
 deploy-prod:
 	kubectl apply -f k8s/prod/
+redeploy-stage:
+	docker build -t observatoriequitat-web:latest images/web/ --no-cache
+	docker tag observatoriequitat-web:latest eu.gcr.io/websmunicipals/observatoriequitat-web:devel-latest
+	docker tag observatoriequitat-web:latest eu.gcr.io/websmunicipals/observatoriequitat-web:master-latest
+	docker push eu.gcr.io/websmunicipals/observatoriequitat-web:devel-latest
+	docker push eu.gcr.io/websmunicipals/observatoriequitat-web:master-latest
+	kubectl delete deployment observatoriequitat-web-stage -n stage
+	kubectl apply -f k8s/stage/
