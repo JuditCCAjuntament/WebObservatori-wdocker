@@ -96,7 +96,7 @@
                                 {if $menu.te_fills == 1}
                                     {assign var="expandir" value=false}
                                     {foreach from=$menu.fills item=submenu }
-                                        {if $submenu.publicat < 2}
+                                        {if $submenu.publicat == 1}
                                             {$expandir = true}
                                         {/if}
                                     {/foreach}
