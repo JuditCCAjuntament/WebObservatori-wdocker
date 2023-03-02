@@ -123,8 +123,8 @@ window.location = "{$menus}15398/";
         <div class="collapsibleItems">
             {foreach from=$portal.menu item=menu}
                 {if $menu.te_fills == 1}
-                    {foreach from=$menu item=submenu}
-                        <a class="menu-text" href="{$submenu.url}">{$submenu.titol}</a>
+                    {foreach from=$menu item=submenu} <!-- {$submenu.titol} -->
+                        <a class="menu-text" href="{$submenu.url}">e</a>
                     {/foreach}
                 {/if}
             {/foreach}
