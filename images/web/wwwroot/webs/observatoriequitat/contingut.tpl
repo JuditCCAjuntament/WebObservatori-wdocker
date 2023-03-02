@@ -114,28 +114,26 @@
 
     </nav>
 
+    
     <ul class="sidenav mobileNavContainer" id="mobile-demo">
-        <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
-        <hr>
-        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
-        <hr>
-        <li>
-            <a class="menu-text" href="index.html#indicadors">Indicadors</a>
+        {foreach from=$portal.menu item=menu}
+            {if $menu.te_fills == 1}
+                <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
+                <ul class="submenu">
+                    {foreach from=$menu.fills item=submenu}
+                        {if $submenu.url == ""}
+                            {assign var="link" value="{$menus}{$submenu.id}"}
+                        {else}
+                            {assign var="link" value=$submenu.url}
+                        {/if}
+                        <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
+                        {/foreach}
+                </ul>
+            {else}
+                <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a>
+                {/if}
+            {/foreach}
 
-            <ul class="submenu">
-                <li><a class="menu-text" href="{$menus}/15391/">{$portal.menu[2].fills[0].titol}</a>
-                </li>
-                <li><a class="menu-text" href="{$menus}/15395/">{$portal.menu[2].fills[1].titol}</a>
-                </li>
-                <li><a class="menu-text" href="{$menus}/15396/">{$portal.menu[2].fills[2].titol}</a>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
-        <hr>
-        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
-        <hr>
     </ul>
     <div class="mainBody">
         <div class="collapsibleItems">
