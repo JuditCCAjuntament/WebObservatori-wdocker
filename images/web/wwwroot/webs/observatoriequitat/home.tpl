@@ -71,7 +71,7 @@ window.location = "{$menus}15398/";
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
                         {foreach from=$portal.menu item=menu}
-                            {if $menu.titol == "Indicadors"}
+                            {if $menu.te_fills == 1}
                                 <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}">{$menu.titol}<i
                                             class="material-icons">expand_more</i></a></li>
                             {else}
