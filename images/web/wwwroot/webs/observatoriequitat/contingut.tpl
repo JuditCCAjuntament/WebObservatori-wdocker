@@ -96,7 +96,6 @@
                                 {if $menu.te_fills == 1}
                                     {assign var="expandir" value=false}
                                     {foreach from=$menu.fills item=submenu }
-
                                         {$expandir = true}
                                     {/foreach}
                                     {if $expandir}
@@ -137,7 +136,7 @@
                                 {assign var="link" value=$submenu.url}
                             {/if}
                             <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
-                            {/foreach}
+                        {/foreach}
                     </ul>
                 {else}
                     <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a>
@@ -154,7 +153,7 @@
                 {if $menu.publicat < 2}
                     {if $menu.te_fills == 1 }
                         {foreach from=$menu.fills item=submenu}
-                            {if $submenu.url == ""}
+                            {if $submenu.url == "" }
                                 {assign var="link" value="{$menus}{$submenu.id}"}
                             {else}
                                 {assign var="link" value=$submenu.url}
