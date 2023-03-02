@@ -15,7 +15,7 @@ $(".collapsibleIndicadors").hover(
     $(".collapsibleItems").css("display", "flex");
     let id = this.id;
     $(".collapsibleItems").children().each(()=>{
-      if (this.id != this.id) {
+      if (this.id != id) {
         this.css("display","none");
       }
     });
