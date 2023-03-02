@@ -94,8 +94,16 @@
                         {foreach from=$portal.menu item=menu}
                             {if $menu.publicat < 2}
                                 {if $menu.te_fills == 1}
-                                    <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
+                                    {assign var="expandir" value=true}
+                                    {foreach from=$menu.fills item=submenu }
+                                        {if $submenu.publicat < 2}
+                                            {$expandir = false}
+                                        {/if}
+                                    {/foreach}
+                                    {if $expandir}
+                                        <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
                                             id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
+                                    {/if}
                                 {else}
                                     <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
                                 {/if}
