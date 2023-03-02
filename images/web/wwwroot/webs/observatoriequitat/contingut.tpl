@@ -132,10 +132,10 @@
                     </ul>
                 {else}
                     <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a>
+                    {/if}
                 {/if}
-                
-                {/foreach}
-            {/if}
+            {/foreach}
+
 
     </ul>
     <div class="mainBody">

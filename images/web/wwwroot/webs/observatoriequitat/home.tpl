@@ -115,8 +115,9 @@ window.location = "{$menus}15398/";
                     <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a>
                     {/if}
 
-                {/foreach}
-            {/if}
+
+                {/if}
+            {/foreach}
 
 
     </ul>
