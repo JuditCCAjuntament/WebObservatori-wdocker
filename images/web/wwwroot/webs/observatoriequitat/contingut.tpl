@@ -100,7 +100,7 @@
                                             {assign var="expandir" value=false}
                                         {/if}
                                     {/foreach}
-                                    {if $expandir}
+                                    {if $expandir == false}
                                         <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
                                             id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
                                     {/if}
