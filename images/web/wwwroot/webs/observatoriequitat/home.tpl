@@ -72,8 +72,8 @@ window.location = "{$menus}15398/";
                     <ul class="hide-on-med-and-down">
                         {foreach from=$portal.menu item=menu}
                             {if $menu.te_fills == 1}
-                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}<i
-                                            class="material-icons">expand_more</i></a></li>
+                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
+                                        id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
                             {else}
                                 <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
                             {/if}
@@ -96,6 +96,23 @@ window.location = "{$menus}15398/";
     </nav>
 
     <ul class="sidenav mobileNavContainer" id="mobile-demo">
+        {foreach from=$portal.menu item=menu}
+            {if $menu.te_fills == 1}
+                <ul class="submenu">
+                <a class="menu-text" href="{$menu.url}">{$menu.titol}</a>
+                    {foreach from=$menu.fills item=submenu}
+                        {if $submenu.url == ""}
+                            {assign var="link" value="{$menus}{$submenu.id}"}
+                        {else}
+                            {assign var="link" value=$submenu.url}
+                        {/if}
+                        <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
+                        {/foreach}
+                </ul>
+            {else}
+                <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
+                {/if}
+            {/foreach}
         <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
         <hr>
         <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
@@ -123,13 +140,13 @@ window.location = "{$menus}15398/";
         <div class="collapsibleItems">
             {foreach from=$portal.menu item=menu}
                 {if $menu.te_fills == 1 }
-                    {foreach from=$menu.fills item=submenu} 
+                    {foreach from=$menu.fills item=submenu}
                         {if $submenu.url == ""}
                             {assign var="link" value="{$menus}{$submenu.id}"}
                         {else}
                             {assign var="link" value=$submenu.url}
                         {/if}
-                            <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
+                        <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
                     {/foreach}
                 {/if}
             {/foreach}

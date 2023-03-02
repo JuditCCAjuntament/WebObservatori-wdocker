@@ -92,11 +92,11 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
                         {foreach from=$portal.menu item=menu}
-                            {if $menu.titol == "Indicadors"}
-                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}">{$menu.titol}<i
-                                            class="material-icons">expand_more</i></a></li>
+                            {if $menu.te_fills == 1}
+                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
+                                        id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
                             {else}
-                                <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
+                                <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
                             {/if}
                         {/foreach}
                         <li><a class="searchTrigger"><i class="material-icons">search</i></li>
@@ -138,6 +138,20 @@
         <hr>
     </ul>
     <div class="mainBody">
+        <div class="collapsibleItems">
+            {foreach from=$portal.menu item=menu}
+                {if $menu.te_fills == 1 }
+                    {foreach from=$menu.fills item=submenu}
+                        {if $submenu.url == ""}
+                            {assign var="link" value="{$menus}{$submenu.id}"}
+                        {else}
+                            {assign var="link" value=$submenu.url}
+                        {/if}
+                        <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
+                    {/foreach}
+                {/if}
+            {/foreach}
+        </div>
         {if $dump_string}
 
             {foreach name=dumps item=item from=$dump_string}
