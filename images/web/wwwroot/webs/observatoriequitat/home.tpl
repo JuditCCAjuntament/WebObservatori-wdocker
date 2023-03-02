@@ -110,7 +110,7 @@ window.location = "{$menus}15398/";
                         {/foreach}
                 </ul>
             {else}
-                <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
+                <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a>
                 {/if}
             {/foreach}
 
