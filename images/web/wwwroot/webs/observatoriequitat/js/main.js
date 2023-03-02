@@ -15,8 +15,8 @@ $(".collapsibleIndicadors").hover(
     $(".collapsibleItems").css("display", "flex");
     let id = this.id;
     console.log("Hovered In Menu"+id);
-    $(".collapsibleItems").children().each(( index )=>{
-        if($( this ).attr("id") == "Indicadors"){
+    $(".collapsibleItems").children().each(( index,element )=>{
+        if($( element ).attr("id") == "Indicadors"){
           console.log("m: "+index);
         }
     });
