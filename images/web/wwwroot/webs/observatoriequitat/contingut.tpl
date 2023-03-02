@@ -99,7 +99,7 @@
                                         {if $submenu.publicat == 1}
                                             {$expandir = true}
                                         {/if}
-                                        {$expandir = true}
+                                        
                                     {/foreach}
                                     {if $expandir}
                                         <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
