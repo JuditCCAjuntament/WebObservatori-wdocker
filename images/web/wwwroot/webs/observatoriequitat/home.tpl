@@ -72,10 +72,10 @@ window.location = "{$menus}15398/";
                     <ul class="hide-on-med-and-down">
                         {foreach from=$portal.menu item=menu}
                             {if $menu.te_fills == 1}
-                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}">{$menu.titol}<i
+                                <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}<i
                                             class="material-icons">expand_more</i></a></li>
                             {else}
-                                <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
+                                <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}>{$menu.titol}</a></li>
                             {/if}
                         {/foreach}
                         <li><a class="searchTrigger"><i class="material-icons">search</i></li>
@@ -129,7 +129,7 @@ window.location = "{$menus}15398/";
                         {else}
                             {assign var="link" value=$submenu.url}
                         {/if}
-                            <a class="menu-text" href="{$link}">{$submenu.titol}</a>
+                            <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
                     {/foreach}
                 {/if}
             {/foreach}
