@@ -98,8 +98,8 @@ window.location = "{$menus}15398/";
     <ul class="sidenav mobileNavContainer" id="mobile-demo">
         {foreach from=$portal.menu item=menu}
             {if $menu.te_fills == 1}
-                <ul class="submenu">
                 <li><a class="menu-text" href="{$menu.url}">{$menu.titol}</a></li>
+                <ul class="submenu">
                     {foreach from=$menu.fills item=submenu}
                         {if $submenu.url == ""}
                             {assign var="link" value="{$menus}{$submenu.id}"}
