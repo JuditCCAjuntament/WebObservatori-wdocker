@@ -73,8 +73,18 @@ window.location = "{$menus}15398/";
                         {foreach from=$portal.menu item=menu}
                             {if $menu.publicat < 2}
                                 {if $menu.te_fills == 1}
-                                    <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
+                                    {assign var="expand" value=false}
+                                    {foreach from=$menu.fills item=submenu}
+                                        {if submenu == 1}
+                                            {$expand = true}
+                                        {/if}
+                                    {/foreach}
+                                    {if $expand}
+                                        <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
                                             id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
+                                    {else}
+                                        <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
+                                    {/if}
                                 {else}
                                     <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
                                 {/if}
