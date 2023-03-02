@@ -74,9 +74,9 @@ window.location = "{$menus}15398/";
                             {if $menu.publicat < 2}
                                 {if $menu.te_fills == 1}
                                     {assign var="expand" value=false}
-                                    {foreach from=$menu.fills item=submenu}
+                                    {foreach from=$menu.fills item=submenu scope=expandscope}
                                         {if submenu == 1}
-                                            {$expand = true}
+                                            {$expand = true scope=expandscope}
                                         {/if}
                                     {/foreach}
                                     {if $expand}
