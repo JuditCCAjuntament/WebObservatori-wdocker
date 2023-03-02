@@ -16,9 +16,7 @@ $(".collapsibleIndicadors").hover(
     let id = this.id;
     console.log("Hovered In Menu"+id);
     $(".collapsibleItems").children().each(()=>{
-      if (this.id != id) {
         console.log(this.id);
-      }
     });
     
     
