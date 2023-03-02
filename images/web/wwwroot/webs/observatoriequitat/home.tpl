@@ -108,7 +108,9 @@ window.location = "{$menus}15398/";
                             {else}
                                 {assign var="link" value=$submenu.url}
                             {/if}
-                            <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
+                            {if $submenu.publicat}
+                                <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
+                            {/if}
                             {/foreach}
                     </ul>
                 {else}
@@ -130,8 +132,9 @@ window.location = "{$menus}15398/";
                         {else}
                             {assign var="link" value=$submenu.url}
                         {/if}
-
-                        <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
+                        {if $submenu.publicat < 2}
+                            <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
+                        {/if}
                     {/foreach}
                 {/if}
             {/foreach}
