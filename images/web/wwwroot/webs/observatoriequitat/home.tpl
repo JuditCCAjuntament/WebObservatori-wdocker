@@ -52,7 +52,7 @@
 
 
 </head>
-
+{assign var="expand" value=false}
 <body>
     {* <script type="text/javascript">
         console.log(window.location.href);
@@ -73,10 +73,10 @@ window.location = "{$menus}15398/";
                         {foreach from=$portal.menu item=menu}
                             {if $menu.publicat < 2}
                                 {if $menu.te_fills == 1}
-                                    {assign var="expand" value=false scope=global}
+
                                     {foreach from=$menu.fills item=submenu}
                                         {if submenu == 1}
-                                            {assign var="expand" value=true scope=global}
+                                            {$expand = true}
                                         {/if}
                                     {/foreach}
                                     {if $expand}
