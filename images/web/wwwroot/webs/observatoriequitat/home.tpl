@@ -135,12 +135,13 @@ window.location = "{$menus}15398/";
             {foreach from=$portal.menu item=menu}
                 {if $menu.publicat < 2}
                     {foreach from=$menu.fills item=submenu}
-                        {if $submenu.url == ""}
-                            {assign var="link" value="{$menus}{$submenu.id}"}
-                        {else}
-                            {assign var="link" value=$submenu.url}
-                        {/if}
                         {if $submenu.publicat == 1}
+                            {if $submenu.url == ""}
+                                {assign var="link" value="{$menus}{$submenu.id}"}
+                            {else}
+                                {assign var="link" value=$submenu.url}
+                            {/if}
+
                             <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
                         {/if}
                     {/foreach}
