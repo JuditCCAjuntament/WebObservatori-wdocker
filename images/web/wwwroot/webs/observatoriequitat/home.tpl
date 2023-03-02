@@ -113,27 +113,7 @@ window.location = "{$menus}15398/";
                 <li><a class="menu-text" href="{$link}">{$submenu.titol}</a>
                 {/if}
             {/foreach}
-        <li><a class="menu-text" href="{$portal.menu[0].url}">{$portal.menu[0].titol}</a></li>
-        <hr>
-        <li><a class="menu-text" href="{$portal.menu[1].url}">{$portal.menu[1].titol}</a></li>
-        <hr>
-        <li>
-            <a class="menu-text" href="index.html#indicadors">Indicadors</a>
-            <ul class="submenu">
-                <li><a class="menu-text" href="{$menus}15391/">{$portal.menu[2].fills[0].titol}</a>
-                </li>
-                <li><a class="menu-text" href="{$menus}15395/">{$portal.menu[2].fills[1].titol}</a>
-                </li>
-                <li><a class="menu-text" href="{$menus}15396/">{$portal.menu[2].fills[2].titol}</a>
-                </li>
 
-            </ul>
-        </li>
-        <hr>
-        <li><a class="menu-text" href="{$portal.menu[3].url}">{$portal.menu[3].titol}</a></li>
-        <hr>
-        <li><a class="menu-text" href="{$portal.menu[4].url}">{$portal.menu[4].titol}</a></li>
-        <hr>
     </ul>
 
     <div class="mainBody">
