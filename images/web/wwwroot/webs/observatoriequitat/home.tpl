@@ -73,10 +73,10 @@ window.location = "{$menus}15398/";
                         {foreach from=$portal.menu item=menu}
                             {if $menu.publicat < 2}
                                 {if $menu.te_fills == 1}
-                                    {assign var="expand" value=false}
+                                    {assign var="expand" value=true}
                                     {foreach from=$menu.fills item=submenu}
                                         {if submenu == 1}
-                                            {assign var="expand" value=true}
+                                            {assign var="expand" value=true }
                                         {/if}
                                     {/foreach}
                                     {if $expand}
