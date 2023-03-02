@@ -136,16 +136,16 @@ window.location = "{$menus}15398/";
         <div class="collapsibleItems">
             {foreach from=$portal.menu item=menu}
                 {if $menu.publicat < 2}
-                    {if $menu.te_fills == 1 }
                         {foreach from=$menu.fills item=submenu}
                             {if $submenu.url == ""}
                                 {assign var="link" value="{$menus}{$submenu.id}"}
                             {else}
                                 {assign var="link" value=$submenu.url}
                             {/if}
-                            <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
+                            {if $submenu.publicat == 1}
+                                <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
+                            {/if}
                         {/foreach}
-                    {/if}
                 {/if}
             {/foreach}
         </div>
