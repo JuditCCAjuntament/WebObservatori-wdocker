@@ -121,9 +121,13 @@ window.location = "{$menus}15398/";
 
     <div class="mainBody">
         <div class="collapsibleItems">
-            <a class="menu-text" href="{$menus}/15391/">{$portal.menu[2].fills[0].titol}</a>
-            <a class="menu-text" href="{$menus}/15395/">{$portal.menu[2].fills[1].titol}</a>
-            <a class="menu-text" href="{$menus}/15396/">{$portal.menu[2].fills[2].titol}</a>
+            {foreach from=$portal.menu item=menu}
+                {if $menu.te_fills == 1}
+                    {foreach from=$menu item=submenu}
+                        <a class="menu-text" href="{$submenu.url}">{$submenu.titol}</a>
+                    {/foreach}
+                {/if}
+            {/foreach}
         </div>
 
 
