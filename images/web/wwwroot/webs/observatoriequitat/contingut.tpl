@@ -93,11 +93,11 @@
                     <ul class="hide-on-med-and-down">
                         {foreach from=$portal.menu item=menu}
                             {if $menu.publicat < 2}
-                                {if $menu.te_fills == 1}
+                                {if $menu.te_fills < 2}
                                     {assign var="expandir" value=true}
                                     {foreach from=$menu.fills item=submenu }
                                         {if $submenu.publicat < 2}
-                                            {$expandir = false}
+                                            {assign var="expandir" value=false}
                                         {/if}
                                     {/foreach}
                                     {if $expandir}
