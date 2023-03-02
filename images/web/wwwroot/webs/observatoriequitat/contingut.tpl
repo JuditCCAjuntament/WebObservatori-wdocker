@@ -95,6 +95,7 @@
                             {if $menu.publicat < 2}
                                 {if $menu.te_fills == 1}
                                     {assign var="expandir" value=true}
+                                    {$expandir = false}
                                     {if $expandir}
                                         <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
                                                 id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
