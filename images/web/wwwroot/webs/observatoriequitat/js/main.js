@@ -16,7 +16,7 @@ $(".collapsibleIndicadors").hover(
     let id = this.id;
     console.log("Hovered In Menu"+id);
     $(".collapsibleItems").children().each(( index,element )=>{
-        if($( element ).attr("id") == id){
+        if($( element ).attr("id") != id){
           $( element ).css("display","none");
         }else{
           $( element ).css("display","inline");
