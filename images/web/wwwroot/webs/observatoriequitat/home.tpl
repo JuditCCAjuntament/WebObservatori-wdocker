@@ -70,26 +70,24 @@ window.location = "{$menus}15398/";
                 <div class="linksContainer">
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
-                    {foreach from=$portal.menu item=menu}
-                        {if $menu.publicat < 2}
-                            {if $menu.te_fills == 1}
-                                {assign var="expandir" value=false}
-                                {foreach from=$menu.fills item=submenu }
-                                    {if $submenu.publicat == 1}
+                        {foreach from=$portal.menu item=menu}
+                            {if $menu.publicat < 2}
+                                {if $menu.te_fills == 1}
+                                    {assign var="expandir" value=false}
+                                    {foreach from=$menu.fills item=submenu }
                                         {$expandir = true}
+                                    {/foreach}
+                                    {if $expandir}
+                                        <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
+                                                id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
+                                    {else}
+                                        <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
                                     {/if}
-                                {/foreach}
-                                {if $expandir}
-                                    <li><a class="menu-text collapsibleIndicadors" href="{$menu.url}"
-                                            id="{$menu.titol}">{$menu.titol}<i class="material-icons">expand_more</i></a></li>
                                 {else}
                                     <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
                                 {/if}
-                            {else}
-                                <li><a class="menu-text" href="{$menu.url}" id="{$menu.titol}">{$menu.titol}</a></li>
                             {/if}
-                        {/if}
-                    {/foreach}
+                        {/foreach}
                         <li><a class="searchTrigger"><i class="material-icons">search</i></li>
                     </ul>
                 </div>
@@ -136,16 +134,16 @@ window.location = "{$menus}15398/";
         <div class="collapsibleItems">
             {foreach from=$portal.menu item=menu}
                 {if $menu.publicat < 2}
-                        {foreach from=$menu.fills item=submenu}
-                            {if $submenu.url == ""}
-                                {assign var="link" value="{$menus}{$submenu.id}"}
-                            {else}
-                                {assign var="link" value=$submenu.url}
-                            {/if}
-                            {if $submenu.publicat == 1}
-                                <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
-                            {/if}
-                        {/foreach}
+                    {foreach from=$menu.fills item=submenu}
+                        {if $submenu.url == ""}
+                            {assign var="link" value="{$menus}{$submenu.id}"}
+                        {else}
+                            {assign var="link" value=$submenu.url}
+                        {/if}
+                        {if $submenu.publicat == 1}
+                            <a class="menu-text" id="{$menu.titol}" href="{$link}">{$submenu.titol}</a>
+                        {/if}
+                    {/foreach}
                 {/if}
             {/foreach}
         </div>
