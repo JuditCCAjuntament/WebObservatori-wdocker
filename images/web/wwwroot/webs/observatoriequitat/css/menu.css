@@ -52,9 +52,14 @@ nav .moibleSearch:hover {
 
 
 nav i.material-icons {
-    display: inline;
+    display: inline-block;
     vertical-align: middle;
     color: #742369;
+    transition: all .5s;
+}
+.menu-text:hover i.material-icons{
+    transform: rotate(180deg);
+    
 }
 
 .mainBody {
