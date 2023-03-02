@@ -125,7 +125,7 @@ window.location = "{$menus}15398/";
                 {if $menu.te_fills == 1 }
                     {foreach from=$menu.fills item=submenu} 
                         {if $submenu.url == ""}
-                            {assign var="link" value=$menus+$submenu.id}
+                            {assign var="link" value=$menus$submenu.id}
                         {else}
                             {assign var="link" value=$submenu.url}
                         {/if}
