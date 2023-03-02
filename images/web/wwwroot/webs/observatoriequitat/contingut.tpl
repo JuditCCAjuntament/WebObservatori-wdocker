@@ -97,7 +97,7 @@
                                     {assign var="expandir" value=false}
                                     {foreach from=$menu.fills item=submenu }
                                         {if $submenu.publicat == 1}
-                                            {$expandir = true}
+                                            {$expandir = false}
                                         {/if}
                                     {/foreach}
                                     {if $expandir}
