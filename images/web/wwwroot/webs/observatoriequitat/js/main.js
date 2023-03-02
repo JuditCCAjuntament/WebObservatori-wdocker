@@ -13,7 +13,15 @@ $(document).ready(function () {
 $(".collapsibleIndicadors").hover(
   function () {
     $(".collapsibleItems").css("display", "flex");
-    console.log("Hovered In Menu"+this.id);
+    let id = this.id;
+    console.log("Hovered In Menu"+id);
+    $(".collapsibleItems").children().each(()=>{
+      if (this.id != id) {
+        console.log(this.id);
+      }
+    });
+    
+    
   }, function () {
     console.log("Hovered Out Menu");
   }
