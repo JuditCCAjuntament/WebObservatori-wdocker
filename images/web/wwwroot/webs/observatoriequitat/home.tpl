@@ -124,7 +124,7 @@ window.location = "{$menus}15398/";
             {foreach from=$portal.menu item=menu}
                 {if $menu.te_fills == 1 && $menu.titol != "Portada"}
                     {foreach from=$menu item=submenu} 
-                        <a class="menu-text" href="{$submenu.url}"><!-- {$menu.titol} --></a>
+                        <a class="menu-text" href="{$submenu.url}">{$menu.titol}</a>
                     {/foreach}
                 {/if}
             {/foreach}
