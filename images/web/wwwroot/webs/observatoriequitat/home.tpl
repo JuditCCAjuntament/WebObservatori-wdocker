@@ -11,7 +11,7 @@
 {assign var="web_urlImg" value="assets/img/"}
 {assign var="web_urlHelper" value="`$portal.dir_template`/helpers/"}
 {assign var="google_Icons" value="https://fonts.googleapis.com/icon?family=Material+Icons"}
-{assign var="open_sans" value="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900"}
+{assign var="open_sans" value="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..800"}
 {assign var="materialize_framework_css" value="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"}
 {assign var="jquery_cdn" value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"}
 {assign var="nuclia_search" value="https://cdn.nuclia.cloud/nuclia-widget.umd.js"}
