@@ -4,7 +4,6 @@ $(document).ready(function () {
   if (window.matchMedia('(max-width: 768px)').matches) {
     //Searchbar but the api is wrong
     $(".notMobile").appendTo(".moibleSearch");
-    console.log("Moving");
   }
 });
 
@@ -13,7 +12,6 @@ $(".collapsibleIndicadors").hover(
   function () {
     $(".collapsibleItems").css("display", "flex");
     let id = this.id;
-    console.log("Hovered In Menu"+id);
     $(".collapsibleItems").children().each(( index,element )=>{
         if($( element ).attr("id") != id){
           $( element ).css("display","none");
@@ -24,16 +22,13 @@ $(".collapsibleIndicadors").hover(
     
     
   }, function () {
-    console.log("Hovered Out Menu");
   }
 );
 $(".collapsibleItems").hover(
   function () {
-    console.log("Hovered In Items");
   },
   function () {
     $(this).css("display", "none");
-    console.log("Hovered out Items");
   }
 );
 
@@ -52,7 +47,6 @@ $(".socioeAnchor").hover(
 $(".searchTrigger").click(
   () => {
     $(".searchContainer").css("display", "flex")
-    console.log("Search trigger");
     $(".linksContainer").css("display", "none")
   }
 );
@@ -61,7 +55,6 @@ $(".searchTrigger").click(
 $(".goBack").click(
   () => {
     $(".searchContainer").css("display", "none")
-    console.log("Search trigger");
     $(".linksContainer").css("display", "flex")
   }
 );
