@@ -57,6 +57,7 @@ $(".searchTrigger").click(
   }
 );
 
+//Collapsibles
 $(".goBack").click(
   () => {
     $(".searchContainer").css("display", "none")
