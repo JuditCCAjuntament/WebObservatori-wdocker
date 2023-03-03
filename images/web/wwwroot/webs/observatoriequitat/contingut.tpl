@@ -1,4 +1,3 @@
-{assign var="web_description" value=""}
 {assign var="web_title" value="Manresa Ciutat Àgora"}
 
 {assign var="web_canonical" value=$portal.canonical}
@@ -43,7 +42,6 @@
     <meta name="description" content="{$web_description}" />
 
     <base href="{$portal.urlBase}/" />
-    <title>{$web_meta_title}</title>
 
     <link rel="icon" type="image/png" href="{$web_urlImg}favicon.png" />
     <link rel="shortcut icon" href="{$web_urlImg}favicon.ico" />
